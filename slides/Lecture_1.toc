@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{\textcolor {violet}{Overview of AI Coding Tools \vspace {0.3in}}}{6}{0}{1}
+\beamer@sectionintoc {2}{\textcolor {violet}{Claude Code / Codex Interfaces \vspace {0.3in}}}{14}{0}{2}
+\beamer@sectionintoc {3}{\textcolor {violet}{Contex Engineering with Claude Overview \vspace {0.3in}}}{20}{0}{3}
+\beamer@sectionintoc {4}{\textcolor {violet}{VS Code with Claude Overview \vspace {0.3in}}}{30}{0}{4}
+\beamer@sectionintoc {5}{\textcolor {violet}{Git: Version Control for Economists \vspace {0.3in}}}{34}{0}{5}
+\beamer@sectionintoc {6}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{40}{0}{6}

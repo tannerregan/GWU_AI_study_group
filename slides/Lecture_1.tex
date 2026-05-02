@@ -371,6 +371,91 @@
 \end{frame}
 
 
+
+\section{\textcolor{violet}{Contex Engineering with Claude Overview \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Contex Engineering}
+
+\begin{itemize}
+    \item Context Window
+    \begin{itemize}
+        \item Each prompt to Claude Code bundles the entire history of your session
+            \begin{itemize}
+                \item your prompts, Claude’s responses, files it read, code outputs, system promtsz
+            \end{itemize}
+        \item These are all appended until the context window hits it's fixed size limit
+        \begin{itemize}
+            \item For Claude Code this is around 200k tokens
+        \end{itemize}
+        \item Claude then ``{\bf auto-compacts}'' writes it's own summary and then restarts fresh        
+        \begin{itemize}
+            \item less preferable to frequent intentional compaction
+        \end{itemize}
+    \end{itemize}
+    \vspace{.05in}
+    \item Contex Engineering
+    \begin{itemize}
+        \item You can tell claude when to compact using \hlcode{/compact your instructions}
+        %\begin{itemize}
+            %\item e.g. write out a new data cleaning script, compact, and ask Claude to edit and comment
+        %\end{itemize}
+        \item Develop habits that the context window focussed on relevant information
+        \begin{itemize}
+        \item Claude.md vs skills ---and--- `ask before edits' vs `plan' Modes 
+        \end{itemize}
+    \end{itemize}
+    \vspace{.05in}
+    \end{itemize}
+    \vfill\footnotesize
+    Read more at \href{https://paulgp.substack.com/i/192433164/what-is-a-context-window-and-how-does-it-work}{Paul GP's Guide} 
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Anatomy of a context window \href{https://paulgp.substack.com/i/192433164/what-is-a-context-window-and-how-does-it-work}{\footnotesize (example from Paul GP's Guide)}}
+
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/context_window_anatomy_paulGP.png}
+\end{center}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Context engineering \href{https://paulgp.substack.com/i/192433164/what-is-a-context-window-and-how-does-it-work}{\footnotesize (example from Paul GP's Guide)}}
+
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/context_engineering_paulGP.png}
+\end{center}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Context auto-compact \href{https://paulgp.substack.com/i/192433164/what-is-a-context-window-and-how-does-it-work}{\footnotesize (example from Paul GP's Guide)}}
+
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/context_window_autocompact_paulGP.png}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Context intentional compacting \href{https://paulgp.substack.com/i/192433164/what-is-a-context-window-and-how-does-it-work}{\footnotesize (example from Paul GP's Guide)}}
+
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/context_window_intentionalcompact_paulGP.png}
+\end{center}
+
+\end{frame}
+
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{CLAUDE.md and Skills}
@@ -392,9 +477,9 @@
     \vspace{.05in}
     \end{itemize}
     \vfill\footnotesize
-    Read more \href{https://claesbackman.com/claude-code-guide.html\#:~:text=CUSTOMISATION,md\%20and\%20Skills}{here} (full descriptions, examples of CLAUDE.md and skills, download pre-made skills)
-
+    Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=CUSTOMISATION,md\%20and\%20Skills}{Claes Backman's Guide} (full descriptions, examples of CLAUDE.md and skills, download pre-made skills)
 \end{frame}
+
 
 
 %%%%%%%%%%%%%%
@@ -402,7 +487,7 @@
 \frametitle{\hlcode{your-project/CLAUDE.md} \href{https://claesbackman.com/claude-code-guide.html\#:~:text=CUSTOMISATION,md\%20and\%20Skills}{\footnotesize (example from Claes Backman's Guide)}}
 
 \begin{center}
-    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/calude_md_example.png}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/claude_md_example.png}
 \end{center}
 
 \end{frame}
@@ -420,7 +505,63 @@
 \end{frame}
 
 
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Claude Modes}
+
+\begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+        \begin{itemize}
+            \item {\bf Ask before edits}
+            \begin{itemize}
+                \item Do steps one at a time
+                \item Asks your permission before running each and every command
+            \end{itemize}
+            \item {\bf Edit automatically}
+            \begin{itemize}
+                \item Same as above but runs commands without asking permission (risky)
+            \end{itemize}
+            \item {\bf Plan}
+            \begin{itemize}
+                \item Claude writes plan.md with many steps 
+                \item You review and execute entire plan 
+            \end{itemize}
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+        \includegraphics[width=\linewidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/claude_modes.png}
+    \end{column}
+\end{columns}
+\end{frame}
+
+
+
+
 \section{\textcolor{violet}{VS Code with Claude Overview \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{What is VS Code?}
+
+\begin{itemize}
+    \item Integrated Development Environment (IDE)
+    \begin{itemize}
+        \item Free, open source (created by Microsoft), and very popular
+    \end{itemize}
+    \item Core features:
+        \begin{itemize}
+            \item[$\circ$] \textbf{Explorer}: file browser and project tree
+            \item[$\circ$] \textbf{Editor}: syntax highlighting for every language (Stata, R, Python, \LaTeX, \ldots)
+            \item[$\circ$] \textbf{Integrated terminal}: run scripts without leaving the editor
+            \item[$\circ$] \textbf{Extensions}: Git, Jupyter, Claude Code, and more
+            \item[$\circ$] \textbf{Command Palette} (\hlcode{Ctrl+Shift+P}): search and run any action by name
+        \end{itemize}
+    \vspace{.05in}
+    \item Resources: \href{https://code.visualstudio.com/docs/introvideos/basics}{Official intro videos (Microsoft)}, \href{https://code.visualstudio.com/docs/getstarted/tips-and-tricks}{Tips and Tricks (Microsoft)}
+\end{itemize}
+
+\end{frame}
 
 %%%%%%%%%%%%%%
 \begin{frame}
@@ -435,6 +576,11 @@
             \item[$\circ$] \textbf{Auto}: Claude acts autonomously (use carefully)
         \end{itemize}
 \end{itemize}
+
+Extensions
+Reading and rendering files
+Claude extension: Current file selection
+
 
 \end{frame}
 
