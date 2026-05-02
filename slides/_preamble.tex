@@ -1,5 +1,11 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=MidnightBlue,
+    linkcolor=MidnightBlue,
+    citecolor=MidnightBlue
+}
 \usepackage{booktabs}
 \usepackage{enumerate}
 \usepackage[absolute,overlay]{textpos}
@@ -17,6 +23,7 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{caption}[numbered]
 \usepackage{comment}
+\usepackage{textcomp}
 
 \newcommand{\backupbegin}{
    \newcounter{finalframe}
@@ -34,6 +41,8 @@
   \vfill
   \end{frame}
 }
+
+\newcommand{\hlcode}[1]{\tcbox[colback=orange!10, colframe=orange!10, arc=3pt, boxrule=0pt, left=2pt, right=2pt, top=1pt, bottom=1pt, on line]{\texttt{#1}}}
 
 \setbeamerfont{frametitle}{size=\large}
 \setbeamertemplate{footline}[frame number]

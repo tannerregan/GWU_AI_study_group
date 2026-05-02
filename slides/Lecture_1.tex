@@ -364,9 +364,71 @@
 
 \begin{itemize}
     \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- walk through VS Code interface live}}
-    \item Key panels: Explorer (files), Editor, Terminal, Source Control (Git), Extensions
-    \item Claude Code panel: where you type prompts, see Claude's plan, approve edits
-    \item Modes:
+    \item Same task as terminal --- compare experience
+
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{CLAUDE.md and Skills}
+
+\begin{itemize}
+    \item \textbf{CLAUDE.md} (memory) --- Claude reads at the start of every session
+        \begin{itemize}
+            \item[$\circ$] Store context that is always true so you don't repeat yourself in every prompt
+            \item[$\circ$] \hlcode{.claude/CLAUDE.md} is global, \hlcode{your-project/CLAUDE.md}  is {\it project} specific
+            \item[$\circ$] Ask Claude to update after substantial changes to project
+        \end{itemize}
+    \vspace{.05in}
+    \item \textbf{Skills} --- Claude reads every time it is called
+        \begin{itemize}
+            \item[$\circ$] Store context for a task that you repeat often, but not always relevant
+            \item[$\circ$] \hlcode{.claude/skills/your-skill/SKILL.md} is called with \hlcode{/your-skill}
+            \item[$\circ$] Write and update your own skills or download from others
+        \end{itemize}
+    \vspace{.05in}
+    \end{itemize}
+    \vfill\footnotesize
+    Read more \href{https://claesbackman.com/claude-code-guide.html\#:~:text=CUSTOMISATION,md\%20and\%20Skills}{here} (full descriptions, examples of CLAUDE.md and skills, download pre-made skills)
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\hlcode{your-project/CLAUDE.md} \href{https://claesbackman.com/claude-code-guide.html\#:~:text=CUSTOMISATION,md\%20and\%20Skills}{\footnotesize (example from Claes Backman's Guide)}}
+
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/calude_md_example.png}
+\end{center}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\hlcode{.claude/skills/robustness/SKILL.md} \href{https://claesbackman.com/claude-code-guide.html\#:~:text=CUSTOMISATION,md\%20and\%20Skills}{\footnotesize (example from Claes Backman's Guide)}}
+
+
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/skill_md_example.png}
+\end{center}
+
+\end{frame}
+
+
+\section{\textcolor{violet}{VS Code with Claude Overview \vspace{0.3in}}}
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{VS Code with Claude Overview}
+
+\begin{itemize}
+    \item Key panels: Explorer (files), Editor, Terminal, Source Control (Git), Extensions, Claude Code
+    \item CC Modes:
         \begin{itemize}
             \item[$\circ$] \textbf{Ask before edits}: Claude proposes each change; you approve
             \item[$\circ$] \textbf{Plan mode}: Claude writes a full plan in Markdown before doing anything
@@ -377,31 +439,8 @@
 \end{frame}
 
 
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Memory and Skills}
-
-\begin{itemize}
-    \item \textbf{CLAUDE.md} (memory): a file Claude reads at the start of every session
-        \begin{itemize}
-            \item[$\circ$] Store project context, preferences, and rules once --- never repeat yourself
-            \item[$\circ$] Lives in your project folder; travels with the project
-        \end{itemize}
-    \vspace{.05in}
-    \item \textbf{Skills} (\texttt{/command}): reusable slash commands for tasks you repeat
-        \begin{itemize}
-            \item[$\circ$] Stored as markdown files in \texttt{.claude/skills/}
-            \item[$\circ$] Examples: \texttt{/summarize-paper}, \texttt{/make-table}, \texttt{/replicate}
-        \end{itemize}
-    \vspace{.05in}
-    \item CLAUDE.md = always-on context \quad Skills = on-demand commands
-\end{itemize}
-
-\end{frame}
 
 \section{\textcolor{violet}{Git: Version Control for Economists \vspace{0.3in}}}
-
-
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Why Git Matters for Research}

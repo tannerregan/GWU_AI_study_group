@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  2 MAY 2026 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  2 MAY 2026 13:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -531,7 +531,9 @@ Package: amsthm 2020/05/29 v2.20.6
 ) (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasethemes.sty)) (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemedefault.sty (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfontthemedefault.sty) (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthemedefault.sty) (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnerthemedefault.sty
 \beamer@dima=\dimen300
 \beamer@dimb=\dimen301
-) (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthemedefault.sty))) (_preamble.tex (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthemedefault.sty))) (_preamble.tex
+Package hyperref Info: Option `colorlinks' set `true' on input line 8.
+ (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen302
 \lightrulewidth=\dimen303
@@ -726,7 +728,9 @@ File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/comment\comment.sty
 \CommentStream=\write5
- Excluding comment 'comment'))
+ Excluding comment 'comment') (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+))
 LaTeX Font Info:    Trying to load font information for OT1+lato-TLF on input line 4.
  (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/lato\ot1lato-tlf.fd
 File: OT1lato-TLF.fd 2019/06/24 Font definitions for OT1/lato-TLF.
@@ -811,7 +815,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 4.
+Package hyperref Info: Link coloring ON on input line 4.
  (Lecture_1.out) (Lecture_1.out)
 \@outlinefile=\write6
 \openout6 = `Lecture_1.out'.
@@ -997,34 +1001,59 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ] [20
 
 ]
+<../figures/screenshots/calude_md_example.png, id=149, 515.42563pt x 275.52937pt>
+File: ../figures/screenshots/calude_md_example.png Graphic file (type png)
+<use ../figures/screenshots/calude_md_example.png>
+Package pdftex.def Info: ../figures/screenshots/calude_md_example.png  used on input line 408.
+(pdftex.def)             Requested size: 371.6567pt x 198.67528pt.
+ [21
+
+ <../figures/screenshots/calude_md_example.png>]
+<../figures/screenshots/skill_md_example.png, id=159, 512.41437pt x 181.17688pt>
+File: ../figures/screenshots/skill_md_example.png Graphic file (type png)
+<use ../figures/screenshots/skill_md_example.png>
+Package pdftex.def Info: ../figures/screenshots/skill_md_example.png  used on input line 420.
+(pdftex.def)             Requested size: 432.48148pt x 152.9146pt.
+ [22
+
+ <../figures/screenshots/skill_md_example.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 402.
+(hyperref)                removing `\new@ifnextchar' on input line 423.
 
-[21
-
-] [22
-
-] [23
+[23
 
 ] [24
-
-] [25
-
-] [26
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 503.
+(hyperref)                removing `\new@ifnextchar' on input line 443.
 
-[27
+[25
+
+] [26
+
+] [27
 
 ] [28
 
 ] [29
 
 ] [30
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 542.
+
+[31
+
+] [32
+
+] [33
+
+] [34
 
 ]
 \tf@nav=\write7
@@ -1042,20 +1071,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Lecture_1.out' has not changed.
-(rerunfilecheck)             Checksum: 1B61844DAD47CF2EDE08E71683DFE339;944.
+(rerunfilecheck)             Checksum: 58B3DC0A4DFCB968C8145DC3FDA28189;1172.
  ) 
 Here is how much of TeX's memory you used:
- 38295 strings out of 467871
- 926237 string characters out of 5414988
- 1433779 words of memory out of 5000000
- 66403 multiletter control sequences out of 15000+600000
- 692431 words of font info for 104 fonts, out of 8000000 for 9000
+ 38378 strings out of 467871
+ 928182 string characters out of 5414988
+ 1434799 words of memory out of 5000000
+ 66474 multiletter control sequences out of 15000+600000
+ 692600 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,123p,817b,2505s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Bold.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Italic.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Regular.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture_1.pdf (30 pages, 201983 bytes).
+Output written on Lecture_1.pdf (34 pages, 281625 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
- 75 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 304 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

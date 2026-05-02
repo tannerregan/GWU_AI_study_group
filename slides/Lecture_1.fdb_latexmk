@@ -1,5 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1777736615.46445 "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" "Lecture_1.pdf" "Lecture_1" 1777736617.67459 0
+["pdflatex"] 1777743184.71624 "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" "Lecture_1.pdf" "Lecture_1" 1777743187.2436 0
+  "../figures/screenshots/calude_md_example.png" 1777741347 73325 27bbf67f4a9a1d9ff535ca19608ec5e7 ""
+  "../figures/screenshots/skill_md_example.png" 1777741379 48572 5714c966adb318f62fbb667437fe3566 ""
   "C:/Users/tanner_regan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1777736070 155344 59d441a461737fb04ed97cba7a29ffd7 ""
   "C:/Users/tanner_regan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1776885851 13336875 b9ae0df35554937b49d1beaa4ac90853 ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_rt66h3.enc" 1561405567 3345 f5bff336afd6959239b79815a9c623d1 ""
@@ -180,6 +182,7 @@
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty" 1762695272 2444 9983e1d0683f102e3b190c64a49313aa ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty" 1761900684 2963 d8ec5a1b4e0a106c5c737900202763e4 ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo" 1761900684 8449 8dc66c6c313c8eb2d774af83bca435dd ""
+  "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty" 1761900684 2846 e26604d3d895e65d874c07f30c291f3f ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamer.cls" 1769083265 12968 a958118de769c52fa2ced33c4b11c64f ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamerbaseauxtemplates.sty" 1769083265 24827 96a0359587d2a218c3004c8bf476ddcc ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamerbaseboxes.sty" 1769083265 8736 a4da079182b9d6d5ba33602fbd9470d6 ""
@@ -286,12 +289,12 @@
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "Lecture_1.aux" 1777736617 5696 b37c24b91ad4ff2118823d65c3b53a60 "pdflatex"
-  "Lecture_1.nav" 1777736617 3757 e89bd48280368d6e99b2657a86c60950 "pdflatex"
-  "Lecture_1.out" 1777736617 944 1b61844dad47cf2ede08e71683dfe339 "pdflatex"
-  "Lecture_1.tex" 1777735426 19275 16b5a2ca24619bb680ec1fd5397a378e ""
-  "_preamble.tex" 1777736608 1024 e10b6b8040330ae8abe32453281a5dea ""
-  "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" 1777735426 19275 16b5a2ca24619bb680ec1fd5397a378e ""
+  "Lecture_1.aux" 1777743186 6652 e0ac170e154fa79867409b7a7b68e4c6 "pdflatex"
+  "Lecture_1.nav" 1777743186 4392 12aa70e3d75392819d29e94682896b29 "pdflatex"
+  "Lecture_1.out" 1777743186 1172 58b3dc0a4dfcb968c8145dc3fda28189 "pdflatex"
+  "Lecture_1.tex" 1777743181 20777 e81d6f4b5923f440ed634f5ae3cfe404 ""
+  "_preamble.tex" 1777742955 1322 c2846e1f1a5d1f2d033f99ffe1ebe7ed ""
+  "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" 1777743181 20777 e81d6f4b5923f440ed634f5ae3cfe404 ""
   (generated)
   "Lecture_1.aux"
   "Lecture_1.log"
