@@ -19,8 +19,9 @@
         \begin{itemize}
             \item[$\circ$] Overview of AI coding tools and how to choose among them
             \item[$\circ$] How to use AI Agents: Terminal, Desktop App, VS Code
-            \item[$\circ$] What Git is and why it matters for research
-            \item[$\circ$] Python coding with AI
+            \item[$\circ$] Conceptual overview of context engineering with Claude
+            \item[$\circ$] VS Code and Claude Code integration
+            \item[$\circ$] Git and Gihub: why they matter for research and Claude
         \end{itemize}
     \vspace{.05in}
     \pause
@@ -29,7 +30,7 @@
             \item[$\circ$] Writing, debugging, and automating code with AI
             \item[$\circ$] ``Vibe coding'' from plain English descriptions
             \item[$\circ$] Project organization and replication packages
-            \item[$\circ$] Demo: data cleaning script from scratch
+            \item[$\circ$] Demo: data cleaning script from scratch (python and stata)
         \end{itemize}
     %\vspace{.05in}
     %\item Lots of time for questions --- this is the most hands-on topic
@@ -535,6 +536,24 @@
 \end{frame}
 
 
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Other tips for managing the context window}
+\begin{itemize}
+    \item {\bf Use @-mentions to be selective}
+    \begin{itemize}
+        \item Rather than Claude reading everything, point to a specific file
+        \item e.g. \hlcode{update all the pathnames in @Lecture\_2.tex}
+    \end{itemize}
+    \item {\bf Check usage with /context}
+    \begin{itemize}
+        \item Type /context in the panel to see a breakdown of how your context window is being used and how much space remains.
+
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
 
 
 \section{\textcolor{violet}{VS Code with Claude Overview \vspace{0.3in}}}
@@ -554,33 +573,54 @@
             \item[$\circ$] \textbf{Explorer}: file browser and project tree
             \item[$\circ$] \textbf{Editor}: syntax highlighting for every language (Stata, R, Python, \LaTeX, \ldots)
             \item[$\circ$] \textbf{Integrated terminal}: run scripts without leaving the editor
-            \item[$\circ$] \textbf{Extensions}: Git, Jupyter, Claude Code, and more
+            \item[$\circ$] \textbf{Extensions}: Git, Claude Code, Jupyter, and more
             \item[$\circ$] \textbf{Command Palette} (\hlcode{Ctrl+Shift+P}): search and run any action by name
         \end{itemize}
     \vspace{.05in}
-    \item Resources: \href{https://code.visualstudio.com/docs/introvideos/basics}{Official intro videos (Microsoft)}, \href{https://code.visualstudio.com/docs/getstarted/tips-and-tricks}{Tips and Tricks (Microsoft)}
-\end{itemize}
+    \item Claes Backman's Guide \href{https://claesbackman.com/claude-code-guide.html}{Claude Code in VS Code for Academic Economists}
+    \begin{itemize}
+        \item Other resources: \href{https://code.visualstudio.com/docs/introvideos/basics}{Official intro videos (Microsoft)}, \href{https://code.visualstudio.com/docs/getstarted/tips-and-tricks}{Tips and Tricks (Microsoft)}
+    \end{itemize}
+    \end{itemize}
+\end{frame}
 
+
+%%%%%%%%%%%%%%
+\begin{frame}[plain]
+\begin{center}
+    \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio=false]{../figures/screenshots/vscode_example.png}
+\end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{VS Code with Claude Overview}
+\frametitle{Claude Code {\bf extension} in VS Code}
 
-\begin{itemize}
-    \item Key panels: Explorer (files), Editor, Terminal, Source Control (Git), Extensions, Claude Code
-    \item CC Modes:
+\begin{columns}[T]
+    \begin{column}{0.48\textwidth}
         \begin{itemize}
-            \item[$\circ$] \textbf{Ask before edits}: Claude proposes each change; you approve
-            \item[$\circ$] \textbf{Plan mode}: Claude writes a full plan in Markdown before doing anything
-            \item[$\circ$] \textbf{Auto}: Claude acts autonomously (use carefully)
+  
+            \item Each new conversation in the Claude panel is a fresh context
+            \begin{itemize}
+                \item Click the + button at the top of the Claude panel to start one,
+                \item or type \hlcode{/clear} to reset the current conversation
+            \end{itemize}
+            \item Go over a fresh window $\longrightarrow$
+            \begin{itemize}
+                \item Session Title, Session History, Mode menu, Current File Selection, Attachments, Command Menu
+            \end{itemize}
         \end{itemize}
-\end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+        \includegraphics[width=\linewidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/claude_window.png}
+    \end{column}
+\end{columns}
+\end{frame}
 
-Extensions
-Reading and rendering files
-Claude extension: Current file selection
+\begin{frame}{What Claude Code Can Read — and What to Convert First}
 
+
+%https://claesbackman.com/claude-code-guide.html#:~:text=What%20Claude%20Code%20Can%20Read%20%E2%80%94%20and%20What%20to%20Convert%20First
 
 \end{frame}
 
@@ -604,6 +644,10 @@ Claude extension: Current file selection
     \vspace{.05in}
     \item The good news: Claude Code can handle all Git commands for you --- you just describe what you want
 \end{itemize}
+
+Git Integration
+%https://claesbackman.com/claude-code-guide.html#:~:text=VERSION%20CONTROL-,Git%20Integration,-Claude%20Code%20is
+
 
 \end{frame}
 
@@ -649,6 +693,7 @@ Claude extension: Current file selection
 \end{frame}
 
 
+\section{\textcolor{violet}{Python for Economists \vspace{0.3in}}}
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Python in VS Code: Environments}
@@ -663,7 +708,7 @@ Claude extension: Current file selection
         \end{itemize}
     \item Ask Claude Code to create and activate an environment for you
 \end{itemize}
-
+%https://claesbackman.com/claude-code-guide.html#:~:text=of%20Economics.-,Python,-ms%2Dpython.python
 \end{frame}
 
 

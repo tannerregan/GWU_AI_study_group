@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  2 MAY 2026 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  2 MAY 2026 16:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -904,22 +904,22 @@ LaTeX Font Info:    Font shape `OT1/lato-TLF/m/n' will be
 [1
 
 {C:/Users/tanner_regan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_y72t7m.enc}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
  (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
  (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 38.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 39.
  (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
 LaTeX Font Info:    Font shape `OT1/lato-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 38.
+(Font)              scaled to size 10.95pt on input line 39.
 LaTeX Font Info:    Font shape `OT1/lato-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 38.
+(Font)              scaled to size 14.4pt on input line 39.
  [2
 
 ] [3
@@ -931,49 +931,49 @@ LaTeX Font Info:    Font shape `OT1/lato-TLF/m/n' will be
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 64.
+(hyperref)                removing `\new@ifnextchar' on input line 65.
 
 LaTeX Font Info:    Font shape `OT1/lato-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 64.
+(Font)              scaled to size 20.74pt on input line 65.
 [6
 
 ]
 LaTeX Font Info:    Font shape `OT1/lato-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 90.
+(Font)              scaled to size 10.95pt on input line 91.
  [7
 
 ]
 LaTeX Font Info:    Font shape `OT1/lato-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 105.
+(Font)              scaled to size 12.0pt on input line 106.
 LaTeX Font Info:    Font shape `OT1/lato-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 105.
+(Font)              scaled to size 12.0pt on input line 106.
  [8
 
 {C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_vc7epu.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+lato-TLF on input line 127.
+LaTeX Font Info:    Trying to load font information for TS1+lato-TLF on input line 128.
  (C:\Users\tanner_regan\AppData\Local\Programs\MiKTeX\tex/latex/lato\ts1lato-tlf.fd
 File: TS1lato-TLF.fd 2019/06/24 Font definitions for TS1/lato-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/lato-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 127.
+(Font)              scaled to size 10.95pt on input line 128.
  [9
 
 {C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_rt66h3.enc}] [10
 
 ]
 LaTeX Font Info:    Font shape `OT1/lato-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 248.
+(Font)              scaled to size 10.95pt on input line 249.
 
-Overfull \hbox (32.81358pt too wide) in paragraph at lines 248--248
+Overfull \hbox (32.81358pt too wide) in paragraph at lines 249--249
 [][]  
  []
 
 LaTeX Font Info:    Font shape `OT1/lato-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 248.
+(Font)              scaled to size 10.0pt on input line 249.
 [11
 
 ]
-Overfull \hbox (32.81358pt too wide) in paragraph at lines 248--248
+Overfull \hbox (32.81358pt too wide) in paragraph at lines 249--249
 [][]  
  []
 
@@ -984,7 +984,7 @@ Overfull \hbox (32.81358pt too wide) in paragraph at lines 248--248
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 273.
+(hyperref)                removing `\new@ifnextchar' on input line 274.
 
 [14
 
@@ -1001,110 +1001,146 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 375.
+(hyperref)                removing `\new@ifnextchar' on input line 376.
 
 [20
 
 ] [21
 
 ]
-<../figures/screenshots/context_window_anatomy_paulGP.png, id=159, 605.76312pt x 373.395pt>
+<../figures/screenshots/context_window_anatomy_paulGP.png, id=163, 605.76312pt x 373.395pt>
 File: ../figures/screenshots/context_window_anatomy_paulGP.png Graphic file (type png)
 <use ../figures/screenshots/context_window_anatomy_paulGP.png>
-Package pdftex.def Info: ../figures/screenshots/context_window_anatomy_paulGP.png  used on input line 425.
+Package pdftex.def Info: ../figures/screenshots/context_window_anatomy_paulGP.png  used on input line 426.
 (pdftex.def)             Requested size: 322.30075pt x 198.66757pt.
  [22
 
  <../figures/screenshots/context_window_anatomy_paulGP.png>]
-<../figures/screenshots/context_engineering_paulGP.png, id=168, 574.145pt x 376.40625pt>
+<../figures/screenshots/context_engineering_paulGP.png, id=172, 574.145pt x 376.40625pt>
 File: ../figures/screenshots/context_engineering_paulGP.png Graphic file (type png)
 <use ../figures/screenshots/context_engineering_paulGP.png>
-Package pdftex.def Info: ../figures/screenshots/context_engineering_paulGP.png  used on input line 436.
+Package pdftex.def Info: ../figures/screenshots/context_engineering_paulGP.png  used on input line 437.
 (pdftex.def)             Requested size: 303.04262pt x 198.67303pt.
  [23
 
  <../figures/screenshots/context_engineering_paulGP.png>]
-<../figures/screenshots/context_window_autocompact_paulGP.png, id=176, 580.1675pt x 370.38374pt>
+<../figures/screenshots/context_window_autocompact_paulGP.png, id=180, 580.1675pt x 370.38374pt>
 File: ../figures/screenshots/context_window_autocompact_paulGP.png Graphic file (type png)
 <use ../figures/screenshots/context_window_autocompact_paulGP.png>
-Package pdftex.def Info: ../figures/screenshots/context_window_autocompact_paulGP.png  used on input line 447.
+Package pdftex.def Info: ../figures/screenshots/context_window_autocompact_paulGP.png  used on input line 448.
 (pdftex.def)             Requested size: 311.19655pt x 198.67046pt.
  [24
 
  <../figures/screenshots/context_window_autocompact_paulGP.png>]
-<../figures/screenshots/context_window_intentionalcompact_paulGP.png, id=184, 583.17876pt x 376.90813pt>
+<../figures/screenshots/context_window_intentionalcompact_paulGP.png, id=188, 583.17876pt x 376.90813pt>
 File: ../figures/screenshots/context_window_intentionalcompact_paulGP.png Graphic file (type png)
 <use ../figures/screenshots/context_window_intentionalcompact_paulGP.png>
-Package pdftex.def Info: ../figures/screenshots/context_window_intentionalcompact_paulGP.png  used on input line 457.
+Package pdftex.def Info: ../figures/screenshots/context_window_intentionalcompact_paulGP.png  used on input line 458.
 (pdftex.def)             Requested size: 307.38364pt x 198.66188pt.
  [25
 
  <../figures/screenshots/context_window_intentionalcompact_paulGP.png>] [26
 
 ]
-<../figures/screenshots/claude_md_example.png, id=199, 515.42563pt x 275.52937pt>
+<../figures/screenshots/claude_md_example.png, id=203, 515.42563pt x 275.52937pt>
 File: ../figures/screenshots/claude_md_example.png Graphic file (type png)
 <use ../figures/screenshots/claude_md_example.png>
-Package pdftex.def Info: ../figures/screenshots/claude_md_example.png  used on input line 493.
+Package pdftex.def Info: ../figures/screenshots/claude_md_example.png  used on input line 494.
 (pdftex.def)             Requested size: 371.6567pt x 198.67528pt.
  [27
 
  <../figures/screenshots/claude_md_example.png>]
-<../figures/screenshots/skill_md_example.png, id=208, 512.41437pt x 181.17688pt>
+<../figures/screenshots/skill_md_example.png, id=212, 512.41437pt x 181.17688pt>
 File: ../figures/screenshots/skill_md_example.png Graphic file (type png)
 <use ../figures/screenshots/skill_md_example.png>
-Package pdftex.def Info: ../figures/screenshots/skill_md_example.png  used on input line 505.
+Package pdftex.def Info: ../figures/screenshots/skill_md_example.png  used on input line 506.
 (pdftex.def)             Requested size: 432.48148pt x 152.9146pt.
  [28
 
  <../figures/screenshots/skill_md_example.png>]
-<../figures/screenshots/claude_modes.png, id=216, 148.05313pt x 113.42375pt>
+<../figures/screenshots/claude_modes.png, id=220, 148.05313pt x 113.42375pt>
 File: ../figures/screenshots/claude_modes.png Graphic file (type png)
 <use ../figures/screenshots/claude_modes.png>
-Package pdftex.def Info: ../figures/screenshots/claude_modes.png  used on input line 535.
+Package pdftex.def Info: ../figures/screenshots/claude_modes.png  used on input line 536.
 (pdftex.def)             Requested size: 194.62195pt x 149.1002pt.
  [29
 
- <../figures/screenshots/claude_modes.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 540.
-
-[30
-
-] [31
-
-] [32
+ <../figures/screenshots/claude_modes.png>] [30
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 589.
+(hyperref)                removing `\new@ifnextchar' on input line 559.
+
+[31
+
+] [32
+
+]
+<../figures/screenshots/vscode_example.png, id=247, 961.09062pt x 516.42938pt>
+File: ../figures/screenshots/vscode_example.png Graphic file (type png)
+<use ../figures/screenshots/vscode_example.png>
+Package pdftex.def Info: ../figures/screenshots/vscode_example.png  used on input line 593.
+(pdftex.def)             Requested size: 455.24693pt x 256.07855pt.
+
+Overfull \hbox (22.76503pt too wide) in paragraph at lines 593--593
+ [] 
+ []
+
+
+Overfull \vbox (9.00375pt too high) detected at line 593
+ []
 
 [33
 
-] [34
+ <../figures/screenshots/vscode_example.png>]
+<../figures/screenshots/claude_window.png, id=254, 220.32312pt x 209.78375pt>
+File: ../figures/screenshots/claude_window.png Graphic file (type png)
+<use ../figures/screenshots/claude_window.png>
+Package pdftex.def Info: ../figures/screenshots/claude_window.png  used on input line 618.
+(pdftex.def)             Requested size: 207.59795pt x 197.66728pt.
+LaTeX Font Info:    Font shape `OT1/lato-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 618.
+ [34
 
-] [35
+ <../figures/screenshots/claude_window.png>] [35
 
-] [36
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 629.
+
+[36
 
 ] [37
 
 ] [38
 
+] [39
+
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 688.
+(hyperref)                removing `\new@ifnextchar' on input line 696.
 
-[39
-
-] [40
+[40
 
 ] [41
 
 ] [42
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 733.
+
+[43
+
+] [44
+
+] [45
+
+] [46
 
 ]
 \tf@nav=\write7
@@ -1122,20 +1158,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Lecture_1.out' has not changed.
-(rerunfilecheck)             Checksum: 7A1C58DF48290A8BC6D42C73344DF96A;1455.
+(rerunfilecheck)             Checksum: BEB36D771B5C121EB489371A8002F33C;1642.
  ) 
 Here is how much of TeX's memory you used:
- 38491 strings out of 467871
- 931836 string characters out of 5414988
+ 38531 strings out of 467871
+ 932790 string characters out of 5414988
  1434799 words of memory out of 5000000
- 66570 multiletter control sequences out of 15000+600000
- 695054 words of font info for 114 fonts, out of 8000000 for 9000
+ 66600 multiletter control sequences out of 15000+600000
+ 699208 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,123p,817b,2505s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Bold.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Italic.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Regular.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture_1.pdf (42 pages, 1377818 bytes).
+Output written on Lecture_1.pdf (46 pages, 1693318 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 403 PDF objects out of 1000 (max. 8388607)
+ 100 named destinations out of 1000 (max. 500000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 
