@@ -1,0 +1,523 @@
+\documentclass[aspectratio=169, 12pt]{beamer}
+\input{_preamble.tex}
+
+\begin{document}
+\linespread{1.3}
+
+\title{Session 2: AI for Coding --- Practical Workflows and Demos}
+\author[AI for Economists]{Elira Kuka and Tanner Regan}
+\date[\today]{The George Washington University}
+\maketitle
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Plan for Today}
+
+\begin{itemize}
+    \item Quick recap of Session 1
+        \begin{itemize}
+            \item[$\circ$] Tools overview, Claude Code interfaces, Git concepts, VS Code setup
+        \end{itemize}
+    \vspace{.05in}
+    \item Today: hands-on workflows
+        \begin{enumerate}
+            \item Writing and debugging code from plain English
+            \item ``Vibe coding'': building a complete tool without writing a line of code
+            \item Data analysis demo with Claude Code (Ask / Plan mode)
+            \item Project structure, CLAUDE.md, and replication packages
+            \item Working with Git and coauthors in VS Code
+            \item Python in VS Code: environments and Jupyter
+            \item Stata with Claude Code
+        \end{enumerate}
+    \item Lots of time for questions and live demos
+\end{itemize}
+
+\end{frame}
+
+
+\section{\textcolor{violet}{Writing and Debugging Code with AI \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Writing Code from Plain English}
+
+\begin{itemize}
+    \item You describe the task; AI writes the code --- in any language (Stata, R, Python, Julia)
+    \item This works even if you do not know the language
+    \item Key skill: writing a good prompt
+        \begin{itemize}
+            \item[$\circ$] Describe inputs and outputs concretely: ``I have a panel dataset with vars X, Y, Z\ldots''
+            \item[$\circ$] Specify what you want verified: ``run it and show me the first 5 rows of output''
+            \item[$\circ$] Be explicit about conventions: ``use `i.year` for year fixed effects in Stata''
+        \end{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Placeholder: side-by-side example of prompt $\to$ code}}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Debugging Code with AI}
+
+\begin{itemize}
+    \item Paste the error message and ask: ``what is wrong and how do I fix it?''
+    \item With Claude Code in agentic mode: it sees the error itself and iterates automatically
+    \item Particularly powerful for:
+        \begin{itemize}
+            \item[$\circ$] Obscure Stata/R errors with cryptic messages
+            \item[$\circ$] Merge problems (wrong key, many-to-many, unmatched observations)
+            \item[$\circ$] Output that looks right but is subtly wrong (off-by-one, wrong unit of observation)
+        \end{itemize}
+    \vspace{.05in}
+    \item Important caveat: AI can fix the error while introducing a different bug
+        \begin{itemize}
+            \item[$\circ$] Always verify output against known benchmarks or summary statistics
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{``Vibe Coding'': Building Tools Without Writing Code}
+
+\begin{itemize}
+    \item Concept: describe what you want at a high level; AI writes, runs, and refines all the code
+    \item You act as the product manager, not the programmer
+    \item Examples relevant to economists:
+        \begin{itemize}
+            \item[$\circ$] ``Build a script that downloads monthly CPI from FRED, merges with my wage data, and plots real wages by year''
+            \item[$\circ$] ``Create a do-file that runs my DiD specification with all the standard robustness checks and exports tables to LaTeX''
+            \item[$\circ$] ``Write a web scraper that pulls contract award data from USASpending.gov''
+        \end{itemize}
+    \item When it works well; when to be cautious
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Automating Repetitive Data Tasks}
+
+\begin{itemize}
+    \item Common tasks AI handles easily:
+        \begin{itemize}
+            \item[$\circ$] Cleaning and reshaping messy data (wide $\leftrightarrow$ long, renaming, recoding)
+            \item[$\circ$] Labeling variables and values from a codebook
+            \item[$\circ$] Merging multiple datasets on complex keys
+            \item[$\circ$] Generating a full set of summary statistics or balance tables
+        \end{itemize}
+    \vspace{.05in}
+    \item Practical workflow for cleaning:
+        \begin{enumerate}
+            \item Show Claude the raw data structure (variable list, codebook, first rows)
+            \item Describe the cleaning steps in plain English
+            \item Review the output, ask for changes, iterate
+        \end{enumerate}
+    \item \textcolor{gray}{\textit{$\triangleright$ Placeholder: example or screenshot}}
+\end{itemize}
+
+\end{frame}
+
+
+\section{\textcolor{violet}{Working with Claude Code: Ask, Plan, Auto \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Three Modes of Operation}
+
+\begin{itemize}
+    \item \textbf{Ask before edits} (safest):
+        \begin{itemize}
+            \item[$\circ$] Claude proposes each file edit before making it; you approve or reject
+            \item[$\circ$] Best for: getting started, when you want full control, unfamiliar codebases
+        \end{itemize}
+    \vspace{.05in}
+    \item \textbf{Plan mode} (recommended for most tasks):
+        \begin{itemize}
+            \item[$\circ$] Claude writes a full plan in Markdown; you review and approve before anything runs
+            \item[$\circ$] Produces clean, commented code with an explicit audit trail
+            \item[$\circ$] Can view and revisit session history
+        \end{itemize}
+    \vspace{.05in}
+    \item \textbf{Auto mode} (most powerful, most risk):
+        \begin{itemize}
+            \item[$\circ$] Claude acts autonomously until the task is done
+            \item[$\circ$] Use for well-defined tasks; always check the output
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Managing Your Session: Key Commands}
+
+\begin{itemize}
+    \item \texttt{/compact <hint>} --- compress context before it overflows; hint steers what Claude keeps
+    \item \texttt{/clear} --- fresh start, zero accumulated context; you choose what to carry forward
+    \item \textbf{Plan mode} before long tasks --- Claude writes a plan first; avoids wasted runs
+    \item \textbf{CLAUDE.md} --- store standing project instructions so Claude knows your setup from the start
+    \item Scope to specific files --- ``look only at \texttt{clean.do}'' cuts tokens and sharpens focus
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Demo: Writing a Data Cleaning Script (Ask Mode)}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide}}
+    \item Task: take a raw dataset, produce a clean analysis file
+    \item Steps we will walk through:
+        \begin{enumerate}
+            \item Point Claude Code at the project folder
+            \item Write a minimum working example in ``Ask before edits'' mode
+            \item Claude proposes each change; we approve
+            \item Verify output matches expectations
+        \end{enumerate}
+    \item What to watch for:
+        \begin{itemize}
+            \item[$\circ$] Does the code run without errors?
+            \item[$\circ$] Do summary statistics match what we expect?
+            \item[$\circ$] Any implicit assumptions we need to check?
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Demo: Cleaning Script Continued (Plan Mode)}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide}}
+    \item Now run the same task in ``Plan mode'':
+        \begin{enumerate}
+            \item Ask Claude to write a plan before touching any files
+            \item Review the plan in Markdown; request changes to the approach
+            \item Approve; Claude executes and produces a clean, commented script
+            \item Compare output to Ask-mode version: same result, better code
+        \end{enumerate}
+    \item Reviewing session history: how to audit what Claude did
+    \item Ask Claude to update README with what was done (good practice)
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{When to Trust AI Code --- and How to Verify It}
+
+\begin{itemize}
+    \item AI code can look completely correct and be wrong in subtle ways
+    \item Verification checklist:
+        \begin{itemize}
+            \item[$\circ$] Does the code run without errors? (necessary, not sufficient)
+            \item[$\circ$] Do observation counts make sense at each merge/collapse step?
+            \item[$\circ$] Do means and distributions match codebook or prior literature?
+            \item[$\circ$] Can you reproduce a known result (e.g., a published Table 1)?
+            \item[$\circ$] Ask Claude: ``what assumptions did you make?'' --- it will often reveal them
+        \end{itemize}
+    \vspace{.05in}
+    \item General rule: trust AI code for \textit{structure}; verify AI code for \textit{content}
+\end{itemize}
+
+\end{frame}
+
+
+\section{\textcolor{violet}{Project Structure and Replication \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Project Folder Structure --- Best Practices}
+
+\begin{itemize}
+    \item Recommended structure for a research project:
+        \begin{itemize}
+            \item[$\circ$] \texttt{/raw\_data} --- original data, never modified
+            \item[$\circ$] \texttt{/data} --- cleaned/analysis data (Git-ignored if sensitive)
+            \item[$\circ$] \texttt{/code} --- all scripts, tracked by Git
+            \item[$\circ$] \texttt{/output} --- tables and figures (regenerated, not tracked)
+            \item[$\circ$] \texttt{/paper} --- LaTeX files
+        \end{itemize}
+    \item Handling secure/restricted data (GW Box, FSRDC):
+        \begin{itemize}
+            \item[$\circ$] Raw data lives on Box or secure server; code lives on Git
+            \item[$\circ$] \texttt{.gitignore} ensures data never enters the repo
+            \item[$\circ$] README documents where raw data comes from and access requirements
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{CLAUDE.md: Persistent Instructions for Claude Code}
+
+\begin{itemize}
+    \item CLAUDE.md is a plain-text file in your project folder that Claude reads at the start of every session
+    \item Use it to store standing instructions so you do not repeat yourself:
+        \begin{itemize}
+            \item[$\circ$] Language and style preferences (``always use Stata 17 syntax'', ``comment every merge'')
+            \item[$\circ$] Data structure (``the unit of observation is person-year; key vars are \texttt{id} and \texttt{year}'')
+            \item[$\circ$] File paths (``raw data is in \texttt{/Box/Project/raw/}'')
+            \item[$\circ$] Rules (``never modify files in \texttt{/raw\_data}'')
+        \end{itemize}
+    \vspace{.05in}
+    \item Claude Code ``Skills'': project-level or global instruction sets --- similar concept
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo: write a CLAUDE.md live}}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Building a Replication Package with Claude Code}
+
+\begin{itemize}
+    \item Claude Code can read your entire project and produce a replication package:
+        \begin{enumerate}
+            \item Point Claude at the project directory
+            \item Ask it to trace the data pipeline from raw files to final tables
+            \item Ask it to write a master script that runs everything in order
+            \item Ask it to write a README documenting data sources, software, and steps
+        \end{enumerate}
+    \item This task would normally take days --- Claude does it in minutes
+    \item You still need to verify: does running the master script reproduce the tables?
+    \item AEA replication standards: what the package needs to include
+\end{itemize}
+
+\end{frame}
+
+
+\section{\textcolor{violet}{Git and Coauthor Workflows in VS Code \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Using Git in VS Code}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
+    \item The Source Control panel: see all changed files, stage, commit, push
+    \item Typical session workflow:
+        \begin{enumerate}
+            \item Pull latest version from GitHub at start of session
+            \item Write code; Claude Code helps
+            \item Stage changed files; write a commit message (or ask Claude to write it)
+            \item Push to GitHub at end of session
+        \end{enumerate}
+    \item Branches for robustness checks:
+        \begin{itemize}
+            \item[$\circ$] Create a branch for ``alternative\_sample''
+            \item[$\circ$] Run the checks; if they hold, merge back into main
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Working with Coauthors and RAs}
+
+\begin{itemize}
+    \item All coauthors clone the same GitHub repo --- everyone has the same code
+    \item RA workflow:
+        \begin{itemize}
+            \item[$\circ$] RA works on a branch; submits a ``pull request'' when done
+            \item[$\circ$] You review the changes before they enter the main code
+            \item[$\circ$] If something breaks, you can always roll back
+        \end{itemize}
+    \item Common pitfalls:
+        \begin{itemize}
+            \item[$\circ$] Merge conflicts: two people edit the same file --- Git flags the conflict; Claude Code can resolve it
+            \item[$\circ$] Committing data files accidentally --- prevent with \texttt{.gitignore}
+        \end{itemize}
+    \vspace{.05in}
+    \item Overleaf integration: sync your LaTeX repo so the paper drafts with the code
+\end{itemize}
+
+\end{frame}
+
+
+\section{\textcolor{violet}{Python and Jupyter in VS Code \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Python Setup in VS Code}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
+    \item Required extensions: Python, Jupyter
+    \item Managing environments:
+        \begin{itemize}
+            \item[$\circ$] Each project gets its own environment (set of packages + versions)
+            \item[$\circ$] Prevents conflicts between projects
+            \item[$\circ$] Ask Claude Code to create and activate an environment for you
+        \end{itemize}
+    \item Running code:
+        \begin{itemize}
+            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
+            \item[$\circ$] \textbf{Jupyter interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
+            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Python for Economists: Common Tasks}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Placeholder: example or screenshot}}
+    \item Data analysis with \texttt{pandas}: merging, collapsing, reshaping --- analogous to Stata
+    \item Econometrics: \texttt{statsmodels}, \texttt{linearmodels} (panel data, IV)
+    \item Data collection: \texttt{requests}, \texttt{BeautifulSoup} for scraping (Session 3)
+    \item Figures: \texttt{matplotlib}, \texttt{seaborn} --- publication-quality plots
+    \vspace{.05in}
+    \item Claude Code can translate your Stata code to Python (or vice versa) --- useful for:
+        \begin{itemize}
+            \item[$\circ$] Running analyses you cannot do in Stata
+            \item[$\circ$] Working with large datasets where Python is faster
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\section{\textcolor{violet}{Stata with Claude Code \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Using Stata with Claude Code}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Elira}}
+    \item Claude Code works with Stata via the terminal or VS Code (Stata Enhanced extension)
+    \item What you can ask Claude to do:
+        \begin{itemize}
+            \item[$\circ$] Write a do-file from a plain-English description of the analysis
+            \item[$\circ$] Debug a Stata error (paste the error; Claude explains and fixes it)
+            \item[$\circ$] Translate a complex cleaning routine into clean, commented Stata code
+            \item[$\circ$] Export regression tables to LaTeX (\texttt{esttab}, \texttt{outreg2})
+        \end{itemize}
+    \vspace{.05in}
+    \item Example: [PLACEHOLDER --- data analysis example to demonstrate]
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Stata Demo: Data Analysis with Claude Code}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide}}
+    \item Task: \textcolor{gray}{\textit{[Placeholder: insert specific empirical example]}}
+    \item Walk-through:
+        \begin{enumerate}
+            \item Describe the dataset and goal to Claude in plain English
+            \item Claude writes the do-file; we run it
+            \item Inspect output, ask for revisions
+            \item Ask Claude to add comments and export a summary table
+        \end{enumerate}
+\end{itemize}
+
+\end{frame}
+
+
+\section{\textcolor{violet}{Wrapping Up \vspace{0.3in}}}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Key Takeaways from Sessions 1 \& 2}
+
+\begin{enumerate}
+    \item AI handles the coding mechanics --- your job is to verify the output and drive the analysis
+    \smallskip
+    \item Use Plan mode for any non-trivial task; it gives you an audit trail and catches mistakes early
+    \smallskip
+    \item Git + Claude Code = version-controlled, reproducible research without learning Git commands
+    \smallskip
+    \item CLAUDE.md files carry your preferences across sessions so you do not repeat yourself
+    \smallskip
+    \item Replication packages are now a hours-long task, not a weeks-long one
+    \smallskip
+    \item The critical skill is \textit{verification}: check outputs, not just that the code runs
+\end{enumerate}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Things to Try Before the Next Session}
+
+\begin{itemize}
+    \item Set up VS Code with Claude Code, Git, and Python (use the setup guide)
+    \item Ask Claude to write a small data task in your preferred language --- verify the output
+    \item Initialize a Git repo for one of your current projects
+    \item Write a CLAUDE.md file for that project
+    \vspace{.05in}
+    \item Coming up in Session 3: Finding and Collecting Data
+        \begin{itemize}
+            \item[$\circ$] Identifying datasets, scraping, APIs, parsing PDFs at scale
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Resources}
+
+\begin{itemize}
+    \item Anton Korinek (UVA) --- \textit{NBER WP 34202} and GenAIforEcon.org
+    \item Aniket Panjwani --- YouTube tutorials on Claude Code for social scientists
+    \item Paul Goldsmith-Pinkham --- practical guide on VS Code + Stata + AI
+    \item Tyler Ransom --- \textit{tyleransom.substack.com}: honest account of daily AI use
+    \vspace{.05in}
+    \item Setup guide for this course: [PLACEHOLDER --- link or shared folder]
+    \item CLAUDE.md template: [PLACEHOLDER]
+    \item Replication package example: [PLACEHOLDER]
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Questions?}
+
+\begin{itemize}
+    \item Questions on anything from Sessions 1 or 2?
+    \item What tasks in your own research would you most like to try this on?
+\end{itemize}
+
+\end{frame}
+
+
+\end{document}

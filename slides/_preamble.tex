@@ -1,0 +1,40 @@
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{amsfonts}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\usepackage[default]{lato}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[circle]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+\usepackage{comment}
+
+\newcommand{\backupbegin}{
+   \newcounter{finalframe}
+   \setcounter{finalframe}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \setcounter{framenumber}{\value{finalframe}}
+}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+    \usebeamerfont{title}\usebeamercolor[fg]{title} \LARGE \insertsectionhead\par%
+  \vfill
+  \end{frame}
+}
+
+\setbeamerfont{frametitle}{size=\large}
+\setbeamertemplate{footline}[frame number]
+\setbeamersize{text margin left=4mm, text margin right=4mm}
