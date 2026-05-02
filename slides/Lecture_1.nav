@@ -68,34 +68,34 @@
 \headcommand {\beamer@framepages {31}{31}}
 \headcommand {\slideentry {4}{0}{3}{32/32}{}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@sectionpages {30}{33}}
-\headcommand {\beamer@subsectionpages {30}{33}}
-\headcommand {\sectionentry {5}{\textcolor {violet}{Git: Version Control for Economists \vspace {0.3in}}}{34}{\textcolor {violet}{Git: Version Control for Economists \vspace {0.3in}}}{0}}
-\headcommand {\slideentry {5}{0}{1}{34/34}{}{0}}
+\headcommand {\beamer@sectionpages {30}{32}}
+\headcommand {\beamer@subsectionpages {30}{32}}
+\headcommand {\sectionentry {5}{\textcolor {violet}{Git: Version Control for Economists \vspace {0.3in}}}{33}{\textcolor {violet}{Git: Version Control for Economists \vspace {0.3in}}}{0}}
+\headcommand {\slideentry {5}{0}{1}{33/33}{}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {5}{0}{2}{34/34}{}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\slideentry {5}{0}{2}{35/35}{}{0}}
+\headcommand {\slideentry {5}{0}{3}{35/35}{}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {5}{0}{3}{36/36}{}{0}}
+\headcommand {\slideentry {5}{0}{4}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\slideentry {5}{0}{4}{37/37}{}{0}}
+\headcommand {\slideentry {5}{0}{5}{37/37}{}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {5}{0}{5}{38/38}{}{0}}
+\headcommand {\slideentry {5}{0}{6}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\slideentry {5}{0}{6}{39/39}{}{0}}
+\headcommand {\beamer@sectionpages {33}{38}}
+\headcommand {\beamer@subsectionpages {33}{38}}
+\headcommand {\sectionentry {6}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{39}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{0}}
+\headcommand {\slideentry {6}{0}{1}{39/39}{}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\beamer@sectionpages {34}{39}}
-\headcommand {\beamer@subsectionpages {34}{39}}
-\headcommand {\sectionentry {6}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{40}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{0}}
-\headcommand {\slideentry {6}{0}{1}{40/40}{}{0}}
+\headcommand {\slideentry {6}{0}{2}{40/40}{}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\slideentry {6}{0}{2}{41/41}{}{0}}
+\headcommand {\slideentry {6}{0}{3}{41/41}{}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\slideentry {6}{0}{3}{42/42}{}{0}}
+\headcommand {\slideentry {6}{0}{4}{42/42}{}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {6}{0}{4}{43/43}{}{0}}
-\headcommand {\beamer@framepages {43}{43}}
-\headcommand {\beamer@partpages {1}{43}}
-\headcommand {\beamer@subsectionpages {40}{43}}
-\headcommand {\beamer@sectionpages {40}{43}}
-\headcommand {\beamer@documentpages {43}}
+\headcommand {\beamer@partpages {1}{42}}
+\headcommand {\beamer@subsectionpages {39}{42}}
+\headcommand {\beamer@sectionpages {39}{42}}
+\headcommand {\beamer@documentpages {42}}
 \headcommand {\gdef \inserttotalframenumber {39}}

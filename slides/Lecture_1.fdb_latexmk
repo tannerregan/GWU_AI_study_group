@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1777750323.96481 "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" "Lecture_1.pdf" "Lecture_1" 1777750327.15438 0
+["pdflatex"] 1777750518.76595 "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" "Lecture_1.pdf" "Lecture_1" 1777750521.92345 0
   "../figures/screenshots/claude_md_example.png" 1777741347 73325 27bbf67f4a9a1d9ff535ca19608ec5e7 ""
   "../figures/screenshots/claude_modes.png" 1777749407 14269 5d28571d6d7345e7437566a5c17b7bce ""
   "../figures/screenshots/context_engineering_paulGP.png" 1777746441 167741 4d75804bba0ddf39eb45a02e99db77f8 ""
@@ -294,12 +294,12 @@
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "Lecture_1.aux" 1777750326 8154 6fdaf785a25bb197a6dfad3e9e78a72f "pdflatex"
-  "Lecture_1.nav" 1777750326 5418 897272edf879263bffbf5ede1e5e82da "pdflatex"
-  "Lecture_1.out" 1777750326 1455 7a1c58df48290a8bc6d42c73344df96a "pdflatex"
-  "Lecture_1.tex" 1777750323 26018 a4c2a2ded4d45f538c99bf33498cbab6 ""
+  "Lecture_1.aux" 1777750521 8154 23ebac0b2301be50952d57a5f5fa7231 "pdflatex"
+  "Lecture_1.nav" 1777750521 5418 51c87dd365e7eb4ce613469fcd6c76b1 "pdflatex"
+  "Lecture_1.out" 1777750521 1455 7a1c58df48290a8bc6d42c73344df96a "pdflatex"
+  "Lecture_1.tex" 1777750514 25955 d8e613caee8ee595f75c070726c249f9 ""
   "_preamble.tex" 1777742955 1322 c2846e1f1a5d1f2d033f99ffe1ebe7ed ""
-  "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" 1777750323 26018 a4c2a2ded4d45f538c99bf33498cbab6 ""
+  "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" 1777750514 25955 d8e613caee8ee595f75c070726c249f9 ""
   (generated)
   "Lecture_1.aux"
   "Lecture_1.log"
