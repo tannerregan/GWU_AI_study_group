@@ -1,0 +1,32 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.nav
+*.snm
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.bbl
+*.blg
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+
+# Build output directory (created by latexmkrc)
+slides/build/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Data files — never commit (store in Dropbox / Box)
+data/
+raw_data/
+*.dta
+*.csv
+*.xlsx
+*.xls

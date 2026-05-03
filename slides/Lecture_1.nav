@@ -74,39 +74,50 @@
 \headcommand {\beamer@framepages {34}{34}}
 \headcommand {\slideentry {4}{0}{5}{35/35}{}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@sectionpages {31}{35}}
-\headcommand {\beamer@subsectionpages {31}{35}}
-\headcommand {\sectionentry {5}{\textcolor {violet}{Git: Version Control for Economists \vspace {0.3in}}}{36}{\textcolor {violet}{Git: Version Control for Economists \vspace {0.3in}}}{0}}
-\headcommand {\slideentry {5}{0}{1}{36/36}{}{0}}
+\headcommand {\slideentry {4}{0}{6}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\slideentry {5}{0}{2}{37/37}{}{0}}
+\headcommand {\slideentry {4}{0}{7}{37/37}{}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {5}{0}{3}{38/38}{}{0}}
+\headcommand {\slideentry {4}{0}{8}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\slideentry {5}{0}{4}{39/39}{}{0}}
+\headcommand {\slideentry {4}{0}{9}{39/39}{}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\beamer@sectionpages {36}{39}}
-\headcommand {\beamer@subsectionpages {36}{39}}
-\headcommand {\sectionentry {6}{\textcolor {violet}{Python for Economists \vspace {0.3in}}}{40}{\textcolor {violet}{Python for Economists \vspace {0.3in}}}{0}}
-\headcommand {\slideentry {6}{0}{1}{40/40}{}{0}}
+\headcommand {\beamer@sectionpages {31}{39}}
+\headcommand {\beamer@subsectionpages {31}{39}}
+\headcommand {\sectionentry {5}{\textcolor {violet}{Git: Version Control for Coding Projects \vspace {0.3in}}}{40}{\textcolor {violet}{Git: Version Control for Coding Projects \vspace {0.3in}}}{0}}
+\headcommand {\slideentry {5}{0}{1}{40/40}{}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\slideentry {6}{0}{2}{41/41}{}{0}}
+\headcommand {\slideentry {5}{0}{2}{41/41}{}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\slideentry {6}{0}{3}{42/42}{}{0}}
+\headcommand {\slideentry {5}{0}{3}{42/42}{}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\beamer@sectionpages {40}{42}}
-\headcommand {\beamer@subsectionpages {40}{42}}
-\headcommand {\sectionentry {7}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{43}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{0}}
-\headcommand {\slideentry {7}{0}{1}{43/43}{}{0}}
+\headcommand {\slideentry {5}{0}{4}{43/43}{}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {7}{0}{2}{44/44}{}{0}}
+\headcommand {\slideentry {5}{0}{5}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\slideentry {7}{0}{3}{45/45}{}{0}}
+\headcommand {\slideentry {5}{0}{6}{45/45}{}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {7}{0}{4}{46/46}{}{0}}
+\headcommand {\slideentry {5}{0}{7}{46/46}{}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\beamer@partpages {1}{46}}
-\headcommand {\beamer@subsectionpages {43}{46}}
-\headcommand {\beamer@sectionpages {43}{46}}
-\headcommand {\beamer@documentpages {46}}
-\headcommand {\gdef \inserttotalframenumber {43}}
+\headcommand {\slideentry {5}{0}{8}{47/47}{}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {5}{0}{9}{48/48}{}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@sectionpages {40}{48}}
+\headcommand {\beamer@subsectionpages {40}{48}}
+\headcommand {\sectionentry {6}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{49}{\textcolor {violet}{Setting Up Your Environment \vspace {0.3in}}}{0}}
+\headcommand {\slideentry {6}{0}{1}{49/49}{}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {6}{0}{2}{50/50}{}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {6}{0}{3}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {6}{0}{4}{52/52}{}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\slideentry {6}{0}{5}{53/53}{}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\beamer@partpages {1}{53}}
+\headcommand {\beamer@subsectionpages {49}{53}}
+\headcommand {\beamer@sectionpages {49}{53}}
+\headcommand {\beamer@documentpages {53}}
+\headcommand {\gdef \inserttotalframenumber {50}}

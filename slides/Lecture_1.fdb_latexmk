@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1777754401.16234 "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" "Lecture_1.pdf" "Lecture_1" 1777754404.71914 0
+["pdflatex"] 1777768249.41698 "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" "Lecture_1.pdf" "Lecture_1" 1777768253.40509 0
   "../figures/screenshots/claude_md_example.png" 1777741347 73325 27bbf67f4a9a1d9ff535ca19608ec5e7 ""
   "../figures/screenshots/claude_modes.png" 1777749407 14269 5d28571d6d7345e7437566a5c17b7bce ""
   "../figures/screenshots/claude_window.png" 1777753212 22736 e234600e2d3a1f1929dbebb3736a5193 ""
@@ -7,7 +7,13 @@
   "../figures/screenshots/context_window_anatomy_paulGP.png" 1777747736 797567 2cb6d2e0c59e6c9e1e94c543beb623ee ""
   "../figures/screenshots/context_window_autocompact_paulGP.png" 1777748134 174192 fda1292dc5160aa0d1cc2c5d243aecd4 ""
   "../figures/screenshots/context_window_intentionalcompact_paulGP.png" 1777748183 203019 507278533a8552793c45402abaaa1d92 ""
+  "../figures/screenshots/git_logo.png" 1777762620 6419 a1c48af8d16eaf5259b6345c8b13e2fa ""
+  "../figures/screenshots/git_source_control_window.png" 1777765828 41405 bf263ced4e67c9bc995cd7c1cfd0dd4a ""
+  "../figures/screenshots/github_logo.png" 1777762565 7081 c9703cf056dcf4899d36094aec2d36bd ""
   "../figures/screenshots/skill_md_example.png" 1777741379 48572 5714c966adb318f62fbb667437fe3566 ""
+  "../figures/screenshots/vs_code_newCCsession.png" 1777755364 67207 d7e541f71cebae4d6d504932cd135064 ""
+  "../figures/screenshots/vs_code_new_window.png" 1777755255 88458 d0bc2a2d84e43ee0f95f5c9ada004fb0 ""
+  "../figures/screenshots/vs_code_open_project.png" 1777755313 47793 af9333c31e3b5159c8ccfd7089a0b166 ""
   "../figures/screenshots/vscode_example.png" 1777751666 462936 5f84fe43290f7510fab1c080a843e33e ""
   "C:/Users/tanner_regan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1777736070 155344 59d441a461737fb04ed97cba7a29ffd7 ""
   "C:/Users/tanner_regan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1776885851 13336875 b9ae0df35554937b49d1beaa4ac90853 ""
@@ -296,12 +302,12 @@
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "Lecture_1.aux" 1777754404 9090 2a5772e77b33b816eb265eb4ea70ba06 "pdflatex"
-  "Lecture_1.nav" 1777754404 6040 2ad0e0b9aaa7558bb791335603e73124 "pdflatex"
-  "Lecture_1.out" 1777754404 1642 beb36d771b5c121eb489371a8002f33c "pdflatex"
-  "Lecture_1.tex" 1777754400 27852 f8259436ba94920bc6875c249f0cff69 ""
+  "Lecture_1.aux" 1777768253 9578 8c9f38aa8fa1d08b47c1ebee64120187 "pdflatex"
+  "Lecture_1.nav" 1777768253 6441 d3dd9777c2a2ee2135ecff7870ce4aad "pdflatex"
+  "Lecture_1.out" 1777768253 1483 3e3350bb65f2a1ef1eb4ca7b56056db7 "pdflatex"
+  "Lecture_1.tex" 1777767932 35476 02feac249179e2eb6c6f431208a274e9 ""
   "_preamble.tex" 1777742955 1322 c2846e1f1a5d1f2d033f99ffe1ebe7ed ""
-  "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" 1777754400 27852 f8259436ba94920bc6875c249f0cff69 ""
+  "c:/Users/tanner_regan/Documents/GitHub/GWU_AI_study_group/slides/Lecture_1.tex" 1777767932 35476 02feac249179e2eb6c6f431208a274e9 ""
   (generated)
   "Lecture_1.aux"
   "Lecture_1.log"

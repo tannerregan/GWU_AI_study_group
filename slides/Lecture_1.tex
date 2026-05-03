@@ -592,6 +592,40 @@
 \end{center}
 \end{frame}
 
+\begin{frame}{Claude Code {\bf extension} in VS Code}
+    \begin{itemize}
+        \item Give Claude access to your whole project directory to maximize its usefulness
+        \begin{itemize}
+            \item Open your full project folder in VS Code (File → Open Folder)
+            \item This can be any folder on your computer — plain folder, a git repository, a Dropbox folder, etc.
+
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{New VS Code Window --- open new folder}
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/vs_code_new_window.png}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Project folder is open --- now open a new Claude Code session}
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/vs_code_open_project.png}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{New Claude Code session is open}
+\begin{center}
+    \includegraphics[width=\textwidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/vs_code_newCCsession.png}
+\end{center}
+\end{frame}
+
+
+
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Claude Code {\bf extension} in VS Code}
@@ -603,12 +637,17 @@
             \item Each new conversation in the Claude panel is a fresh context
             \begin{itemize}
                 \item Click the + button at the top of the Claude panel to start one,
-                \item or type \hlcode{/clear} to reset the current conversation
-            \end{itemize}
+                \item or type \hlcode{/clear} to reset
+            \end{itemize}\vfill
             \item Go over a fresh window $\longrightarrow$
-            \begin{itemize}
-                \item Session Title, Session History, Mode menu, Current File Selection, Attachments, Command Menu
-            \end{itemize}
+            \begin{enumerate}
+                \item Session Title
+                \item Session History
+                \item Mode menu
+                \item Current File Selection
+                \item Attachments
+                \item Command Menu
+            \end{enumerate}
         \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
@@ -617,61 +656,244 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{What Claude Code Can Read — and What to Convert First}
-
-
-%https://claesbackman.com/claude-code-guide.html#:~:text=What%20Claude%20Code%20Can%20Read%20%E2%80%94%20and%20What%20to%20Convert%20First
+\begin{frame}{Files and Data that Claude is good at reading}
+\begin{itemize}
+    \item Claude Code works best with plain text files
+    \begin{itemize}
+        \item e.g. \texttt{.txt}, \texttt{.do}, \texttt{.py}, \texttt{.tex}, \texttt{.csv}, \texttt{.log}, \texttt{.md}, etc.
+    \end{itemize}
+    \item Tips for optimial performance with other file types
+    \begin{itemize}
+        \item \texttt{.docx}: convert to markdown with \hlcode{pandoc file.docx -o file.md}
+        \item \texttt{.xlsx}, \texttt{.dta}, \texttt{.rds}, \texttt{.sav}: convert to CSV first with a short script
+        \item \texttt{.pdf}:  
+        \begin{itemize}
+            \item Use the \texttt{.tex} file whenever possible (especially if equations and tables)
+            \item Long PDFs (50+ pages): convert to markdown first
+            \item Scanned PDFs: run OCR first, then convert to markdown
+        \end{itemize}
+        \end{itemize}
+    \item Create a skill that loads file types, e.g. \hlcode{/pdf-to-markdown}
+\end{itemize}
+\vfill
+\footnotesize Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=What\%20Claude\%20Code\%20Can\%20Read\%20\%E2\%80\%94\%20and\%20What\%20to\%20Convert\%20First
+}{Claes Backman's Guide} (details on handling different file types)
 
 \end{frame}
 
 
 
-\section{\textcolor{violet}{Git: Version Control for Economists \vspace{0.3in}}}
+\section{\textcolor{violet}{Git: Version Control for Coding Projects \vspace{0.3in}}}
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Why Git Matters for Research}
 
 \begin{itemize}
     \item Version control = a complete history of every change to your code
-    \item No more: \texttt{analysis\_v3\_FINAL\_revised2.do}
+    \begin{itemize}
+        \item No more: \texttt{analysis\_v3\_FINAL\_revised2.do}
+    \end{itemize}
     \item Enables:
         \begin{itemize}
-            \item[$\circ$] Rolling back to any prior version of your code
-            \item[$\circ$] Working safely with coauthors and RAs without overwriting each other
-            \item[$\circ$] Tracking exactly what changed between draft versions
-            \item[$\circ$] Automatic replication audit trail
+            \item[$\circ$] Backup: retrieve any prior version of your code
+            \item[$\circ$] Collaborate: coauthors and RAs edit without overwriting each other
+            \item[$\circ$] Track: what changed and who made the changes at every stage
         \end{itemize}
-    \vspace{.05in}
-    \item The good news: Claude Code can handle all Git commands for you --- you just describe what you want
+    \item Can help improve project replicability both internally and externally 
+        \begin{itemize}
+            \item an automatic audit trail
+            \item sharing and iterating on projects publicly
+        \end{itemize}
 \end{itemize}
-
-Git Integration
-%https://claesbackman.com/claude-code-guide.html#:~:text=VERSION%20CONTROL-,Git%20Integration,-Claude%20Code%20is
-
-
+\vfill
+\footnotesize Read more at Lu\'{i}s Fonseca's \href{https://luispfonseca.com/files/slides\_git.pdf}{Version Control with git (for economists)}
 \end{frame}
 
 
 %%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Key Git Concepts (No Commands Required)}
+\frametitle{Git and Github Concepts}
 
 \begin{itemize}
-    \item \textbf{Repository (repo)}: a folder whose history Git is tracking
-    \item \textbf{Commit}: a snapshot of your code at a point in time, with a message
-    \item \textbf{Push / Pull}: sync your local repo with GitHub (the remote copy)
-    \item \textbf{Branch}: a parallel version of the code for a new feature or robustness check
-    \item \textbf{Merge}: fold a branch back into the main code
-    \vspace{.05in}
-    \item Typical workflow for an economist:
-        \begin{enumerate}
-            \item Work on code; when something works, commit it
-            \item Push to GitHub at end of day (backup + coauthor access)
-            \item RA works on a branch; you review and merge
-        \end{enumerate}
+    \item Key concepts to remember
+    \begin{itemize}
+        \item \textbf{Repository (repo)}: a folder whose history Git is tracking
+        \item \textbf{Commit}: a snapshot of the code at a point in time, with a descriptive message
+        \item \textbf{Push / Pull / Sync}: sync your local repo with the online/remote copy
+    \end{itemize}\vfill
+    \item Other concepts, less critical to understand at the start:
+    \begin{itemize}
+        \item \textbf{Branch}: a parallel version of the code for exploration
+        \item \textbf{Merge}: fold a branch back into the main code
+        \item \textbf{Clone}: copy your online repo to local computer for the first time
+        \item \textbf{Fork}: copy someone else's online repo to your own GitHub account
+    \end{itemize}
 \end{itemize}
-
 \end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Git vs.\ GitHub: Two Separate Things}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{../figures/screenshots/git_logo.png}
+    \end{center}
+    \textbf{git} \textemdash{} the software that runs locally
+    \begin{itemize}
+        \item All history lives in the \texttt{.git} folder
+        \item Records \textit{commits}, \textit{branches}, \textit{merges}
+        \item Compares any two versions line-by-line; flags conflicts
+    \end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{../figures/screenshots/github_logo.png}
+    \end{center}
+    \textbf{GitHub} \textemdash{} online hosting platform
+    \begin{itemize}
+        \item Stores a remote copy of your repo
+        \item Handles \textit{Push}, \textit{Pull}, \textit{Clone}, \textit{Fork}
+        \item Free unlimited private repos
+        \item Alternatives: GitLab, Bitbucket
+    \end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Typical Git workflows for an economist}
+\begin{itemize}
+    \item Typical workflow for an economist:
+    \begin{enumerate}
+        \item Pull/Sync code at start of work session (get latest version of online repo)
+        \item Work on code; when something works, {\it commit} it with a descriptive message
+        \item Push/Sync at end of work session (updates the online repo)
+    \end{enumerate}\vfill
+    \item More elaborate, with RA review
+    \begin{enumerate}
+        \item RA pulls repo,creates a branch from the latest commit
+        \item RA works on branch, makes commits and pushes it when finished
+        \item You compare the branch to the main branch
+        \begin{itemize}
+            \item recall git highlights all the differences line by line and flags conflicts
+        \end{itemize}
+        \item You merge back into main branch, or ask RA for fixes 
+        \item Push/Sync to update the online repo
+    \end{enumerate} 
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}{Git source control panel in VS Code}
+\begin{columns}
+    \begin{column}{0.48\textwidth}
+            \begin{itemize}
+            \item Source Control panel
+            \begin{itemize}
+                \item Click the github icon to open
+            \end{itemize}
+            \item Go over an example $\longrightarrow$
+            \begin{enumerate}
+                \item Icon with number of changes
+                \item Message bar for commit
+                \item Pull/Sync button
+                \item commit button (also push)
+                \item List of changes
+                \item Graph of commits and branches
+            \end{enumerate}
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+        \includegraphics[width=\linewidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/git_source_control_window.png}
+    \end{column}
+\end{columns}
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}{Setting up a github repository}
+    \begin{itemize}
+        \item Go to \href{https://github.com/}{github.com}
+        \begin{itemize}
+            \item Create an account, add new repository, add collaborators
+            \item Create a readme file that describes the project
+        \end{itemize}
+    \smallskip
+        \item Open VS Code git extension (and sign into your GitHub account)
+        \begin{itemize}
+            \item clone the repo to local computer: \hlcode{Ctrl + Shift + P} (Windows/Linux) or \hlcode{Cmd + Shift + P} (Mac) to open the Command Palette. Type \hlcode{Git: Clone} and press Enter. Choose from the list of your repos.
+        \end{itemize}
+    \smallskip
+        \item I have created a GitHub repo for our workshop \href{https://github.com/tannerregan/GWU\_AI\_study\_group}{GWU\_AI\_study\_group}
+        \begin{itemize}
+            \item It is setup as Public, so you can already look at it and even Fork it 
+            \item If you make a GitHub account and send me your username, I will add you as a collaborator so you can push changes to the repo as well
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}{What Goes in a Repository?}
+\begin{columns}[T]
+\begin{column}{0.7\textwidth}
+\begin{itemize}
+    \item \textbf{Do NOT} store any datasets (source or generated) 
+    \begin{itemize}
+        \item[$\circ$] instead store in \href{https://it.gwu.edu/box}{Box} (GW-endorsed secure storage)
+        \item[$\circ$] or locally, Dropbox, Google Drive, etc.
+    \end{itemize}
+    \smallskip
+    \item \textbf{Do} store all other project materials 
+    \begin{itemize}
+        \item[$\circ$] code (Stata, Python, \LaTeX)
+        \item[$\circ$] output: tables, figures
+        \item[$\circ$] CLAUDE.md, notes, slides
+    \end{itemize}
+\end{itemize}
+\end{column}
+%
+\begin{column}{0.3\textwidth}
+\vspace{-2pt}
+\begin{tikzpicture}[x=1cm, y=0.48cm,
+  twig/.style={draw=gray!40, thin, line cap=round}]
+% ---- root ----
+\node[anchor=west, font=\ttfamily\small\bfseries] (root) at (0,0)
+  {GWU\_AI\_study\_group/};
+% main spine
+\draw[twig] (0.18,-0.38) -- (0.18,-8.0);
+% ---- committed folders ----
+\foreach \y/\lbl in {
+    1/{slides/}, 3/{code/}, 4/{figures/}, 5/{notes/}, 6/{tables/}}{
+  \draw[twig] (0.18,-\y) -- (0.42,-\y);
+  \node[anchor=west, font=\ttfamily\footnotesize\bfseries,
+        text=violet!85!black] at (0.44,-\y) {\lbl};
+}
+% ---- slides sub-tree ----
+\draw[twig] (0.98,-1.22) -- (0.98,-2.78);
+\foreach \y/\lbl in {
+    1.5/{\_preamble.tex}, 2.0/{Lecture\_1.tex}, 2.5/{Lecture\_2.tex}}{
+  \draw[twig] (0.98,-\y) -- (1.18,-\y);
+  \node[anchor=west, font=\ttfamily\scriptsize, text=black!50]
+    at (1.20,-\y) {\lbl};
+}
+% ---- committed files ----
+\foreach \y/\lbl in {7/{CLAUDE.md}, 8/{README.md}}{
+  \draw[twig] (0.18,-\y) -- (0.42,-\y);
+  \node[anchor=west, font=\ttfamily\footnotesize, text=black!65]
+    at (0.44,-\y) {\lbl};
+}
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
 
 
 %%%%%%%%%%%%%%
@@ -679,7 +901,6 @@ Git Integration
 \frametitle{Git and Claude Code: What the Integration Looks Like}
 
 \begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Placeholder: screenshot or demo}}
     \item In VS Code: Git panel shows all changes; Claude Code can stage, commit, push on request
     \item You tell Claude: ``commit my changes with a descriptive message'' --- it writes the message too
     \item Branching for research: create a branch for each robustness check, merge if it works
@@ -690,44 +911,12 @@ Git Integration
         \end{itemize}
 \end{itemize}
 
+Git Integration
+%https://claesbackman.com/claude-code-guide.html#:~:text=VERSION%20CONTROL-,Git%20Integration,-Claude%20Code%20is
+Claude Code is git-aware. When you open a project that is a git repository, Claude can see your commit history, staged changes, and diffs — without you having to paste anything. This makes it useful for version control tasks alongside coding ones.
 \end{frame}
 
 
-\section{\textcolor{violet}{Python for Economists \vspace{0.3in}}}
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Python in VS Code: Environments}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
-    \item Anaconda manages Python installations and packages
-    \item Each project gets its own \textbf{environment}: a fixed set of packages and versions
-        \begin{itemize}
-            \item[$\circ$] Prevents conflicts between projects
-            \item[$\circ$] Ensures others can reproduce your results exactly
-        \end{itemize}
-    \item Ask Claude Code to create and activate an environment for you
-\end{itemize}
-%https://claesbackman.com/claude-code-guide.html#:~:text=of%20Economics.-,Python,-ms%2Dpython.python
-\end{frame}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Running Python Code with Jupyter}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
-    \item Three modes in VS Code:
-        \begin{itemize}
-            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
-            \item[$\circ$] \textbf{Interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
-            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
-        \end{itemize}
-    \item Claude Code can write, run, and debug Python in any of these modes
-\end{itemize}
-
-\end{frame}
 
 
 \section{\textcolor{violet}{Setting Up Your Environment \vspace{0.3in}}}
@@ -751,7 +940,15 @@ Git Integration
         \end{itemize}
     \item We have a step-by-step setup guide --- see handout / shared folder
 \end{itemize}
+\end{frame}
 
+\begin{frame}
+    \begin{itemize}
+        \item What to install / setup before next class (if you want to follow along)
+        \item VS Code, Git, Python, Claude Code subscription
+        \item Github account
+        \item VS Code extensions: Claude Code, Jupyter, Python, Stata
+    \end{itemize}
 \end{frame}
 
 
