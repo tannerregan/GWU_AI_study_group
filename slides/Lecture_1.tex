@@ -573,7 +573,7 @@
             \item[$\circ$] \textbf{Explorer}: file browser and project tree
             \item[$\circ$] \textbf{Editor}: syntax highlighting for every language (Stata, R, Python, \LaTeX, \ldots)
             \item[$\circ$] \textbf{Integrated terminal}: run scripts without leaving the editor
-            \item[$\circ$] \textbf{Extensions}: Git, Claude Code, Jupyter, and more
+            \item[$\circ$] \textbf{Extensions}: Git, Claude, Stata, latex, python, etc. \href{https://claesbackman.com/claude-code-guide.html\#:~:text=A\%20Starter\%20Pack\%20for\%20Economists}{Starter Pack for Economists}.
             \item[$\circ$] \textbf{Command Palette} (\hlcode{Ctrl+Shift+P}): search and run any action by name
         \end{itemize}
     \vspace{.05in}
@@ -598,9 +598,9 @@
         \begin{itemize}
             \item Open your full project folder in VS Code (File → Open Folder)
             \item This can be any folder on your computer — plain folder, a git repository, a Dropbox folder, etc.
-
         \end{itemize}
-    \end{itemize}
+    \end{itemize}\vfill
+    
 \end{frame}
 
 %%%%%%%%%%%%%%
@@ -926,35 +926,46 @@ Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=VERS
 \begin{frame}
 \frametitle{Core tools needed to set yourself up }
 \begin{itemize}
-    \item Software to install
+    \item Software to install {\color{gray}(first two are substitutable)}
         \begin{enumerate}
             \item \textbf{VS Code} --- free to download \href{https://code.visualstudio.com/download}{here}
+            \begin{itemize}
+                \item + Claude Code extension
+            \end{itemize}
+            \item \textbf{Claude Code} --- free to download \href{https://claude.com/download}{here}
             \item \textbf{Git} --- free to download \href{https://git-scm.com/install/windows}{here}
         \end{enumerate}
     \item Subscriptions and accounts to create
         \begin{enumerate}
             \item \textbf{Claude Code} --- subscribe for a fee (\href{claude.com}{here})
-            \item \textbf{GitHub} --- account (free)
+            \item \textbf{GitHub} --- free account (\href{https://github.com/}{here}), and send Tanner your username!
         \end{enumerate}
-    \item VS Code extensions to install:
-        \begin{itemize}
-            \item[$\circ$] Claude Code, LaTex Workshop, Jupyter, Python, Stata Workbench
-        \end{itemize}
     \item Guides
     \begin{itemize}
         \item A step-by-step setup guide for Mac (\href{https://github.com/tannerregan/GWU\_AI\_study\_group/blob/main/notes/Mac\_AI\_Setup\_Guide.md}{here}) and Windows (\href{https://github.com/tannerregan/GWU\_AI\_study\_group/blob/main/notes/Windows\_AI\_Setup\_Guide.md}{here})
-        \item However, if you install VS Code + Claude Code estension, Claude can walk you through any of the other setup items.
+        \item However, Claude can walk you through any setup as long as you:
+        \begin{itemize}
+            \item install VS Code + Claude Code estension
+            \item or install Claude Code desktop app
+        \end{itemize}
     \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Other set up if you want to follow along next class}
     \begin{itemize}
-        \item What to install / setup before next class (if you want to follow along)
-        \item VS Code, Git, Python, Claude Code subscription
-        \item Github account
-        \item VS Code extensions: Claude Code, Jupyter, Python, Stata
-        \item \textbf{Python} --- Anaconda distribution recommended (free)
+    \item Software to install {\color{gray}(first two are substitutable)}
+        \begin{enumerate}
+            \item \textbf{Miniconda} --- free to download \href{https://www.anaconda.com/download/success}{here}, python will come included
+
+            \item \textbf{MikTex} --- free to download \href{https://miktex.org/download}{here}, I also had to install \href{https://strawberryperl.com/}{Strawberry Perl}
+            \item \textbf{Stata} --- our old friend
+        \end{enumerate}\vfill
+    \item VS Code Extensions
+    \begin{itemize}
+        \item Claude Code, LaTex Workshop, Stata Workbench, Python, Jupyter
+        \item See also Claes Backman's \href{https://claesbackman.com/claude-code-guide.html\#:~:text=A\%20Starter\%20Pack\%20for\%20Economists}{Starter Pack for Economists}
+    \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -964,17 +975,17 @@ Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=VERS
 \frametitle{Session 1 --- Key Takeaways}
 
 \begin{enumerate}
-    \item AI has perhaps most value added in coding
+    \item AI has perhaps most value added in coding --- output is verifiable
     \smallskip
-    \item Agentic $\neq$ chatbot: reads files, writes and runs code, fixes errors, reports back
+    \item \textbf{Agentic $\neq$ chatbot}: reads files, writes and runs code, fixes errors, reports back
     \smallskip
-    \item Two serious agentic options today: Claude Code and Codex
-    \begin{itemize}
-            \item[$\circ$] Pick one, learn it, reassess in 6 months
-        \end{itemize}
-    \item Tokens accumulate fast in long session --- start new session for each new task
+    \item Two serious options today: \textbf{Claude Code} and \textbf{Codex} --- pick one
     \smallskip
-    \item Three interfaces (Terminal, Desktop, VS Code) and Git are your essential stack
+    \item \textbf{Manage your context window}: tokens accumulate fast --- start fresh sessions, compact often, use CLAUDE.md so you never repeat yourself
+    \smallskip
+    \item \textbf{Git + GitHub} are your safety net --- commit before big changes, push often
+    \smallskip
+    \item Three interfaces (Terminal, Desktop, VS Code) --- VS Code integrates everything
 \end{enumerate}
 
 \end{frame}
