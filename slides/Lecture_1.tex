@@ -898,22 +898,22 @@
 
 %%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Git and Claude Code: What the Integration Looks Like}
+\frametitle{Git and Claude Code Integration}
 
 \begin{itemize}
-    \item In VS Code: Git panel shows all changes; Claude Code can stage, commit, push on request
-    \item You tell Claude: ``commit my changes with a descriptive message'' --- it writes the message too
-    \item Branching for research: create a branch for each robustness check, merge if it works
-    \item Connecting with Overleaf:
-        \begin{itemize}
-            \item[$\circ$] Overleaf Pro can sync with a GitHub repo
-            \item[$\circ$] Alternatively: LaTeX Workshop extension in VS Code + local compilation
-        \end{itemize}
+    \item Claude Code is get-aware
+    \begin{itemize}
+        \item When the open project is a git repo, Claude can see the entire commit history
+    \end{itemize}\vfill
+    \item Claude can facilitate git operations
+    \begin{itemize} 
+        \item Write commit messages \hlcode{commit my changes with a descriptive message}
+        \item Explain what changed \hlcode{what changed between commit A and B?}
+        \item Resolve a merge conflict \hlcode{fix RA code to merge with the main branch}
+    \end{itemize}
 \end{itemize}
-
-Git Integration
-%https://claesbackman.com/claude-code-guide.html#:~:text=VERSION%20CONTROL-,Git%20Integration,-Claude%20Code%20is
-Claude Code is git-aware. When you open a project that is a git repository, Claude can see your commit history, staged changes, and diffs — without you having to paste anything. This makes it useful for version control tasks alongside coding ones.
+\vfill\footnotesize
+Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=VERSION\%20CONTROL-,Git\%20Integration,-Claude\%20Code\%20is}{Claes Backman's Guide}
 \end{frame}
 
 

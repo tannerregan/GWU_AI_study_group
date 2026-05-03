@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  2 MAY 2026 20:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  2 MAY 2026 20:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1215,17 +1215,17 @@ Package rerunfilecheck Info: File `Lecture_1.out' has not changed.
 (rerunfilecheck)             Checksum: 3E3350BB65F2A1EF1EB4CA7B56056DB7;1483.
  ) 
 Here is how much of TeX's memory you used:
- 38637 strings out of 467871
- 935781 string characters out of 5414988
+ 38640 strings out of 467871
+ 935829 string characters out of 5414988
  1434799 words of memory out of 5000000
- 66693 multiletter control sequences out of 15000+600000
+ 66696 multiletter control sequences out of 15000+600000
  699544 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,123p,817b,2505s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Bold.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Italic.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Regular.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/tanner_regan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture_1.pdf (53 pages, 1868358 bytes).
+Output written on Lecture_1.pdf (53 pages, 1869402 bytes).
 PDF statistics:
- 454 PDF objects out of 1000 (max. 8388607)
+ 455 PDF objects out of 1000 (max. 8388607)
  113 named destinations out of 1000 (max. 500000)
  166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
