@@ -1,0 +1,15 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.nav
+*.snm
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.bbl
+*.blg
+
+# Build output directory (created by latexmkrc)
+build/
