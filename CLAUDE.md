@@ -71,12 +71,6 @@ Code examples are teaching materials — prioritize clarity and comments over co
 - `modelsummary` for regression tables
 - Scripts go in `code/r/`
 
-### Cross-Language Rules
-- Never modify anything in `raw_data/` — treat as read-only
-- Cleaned/analysis data goes in `data/` (gitignore if sensitive)
-- Tables and figures go in `output/` (regenerated on each run, not committed to Git)
-- Always verify: observation counts at each merge/collapse, means against codebook or prior literature
-- AI code can be structurally correct but substantively wrong — always check output against known benchmarks
 
 ---
 
@@ -92,18 +86,9 @@ GWU_AI_study_group/
 │   ├── python/
 │   ├── stata/
 │   └── r/
-├── data/            # Cleaned analysis data (gitignore if sensitive)
-├── raw_data/        # Original data — never modify
-├── output/          # Tables and figures (regenerated, not committed)
 ├── README.md
 └── CLAUDE.md
 ```
 
 ---
 
-## Key References
-
-- Anton Korinek (UVA) — NBER WP 34202; GenAIforEcon.org
-- Aniket Panjwani — YouTube tutorials on Claude Code for social scientists
-- Paul Goldsmith-Pinkham (Yale) — VS Code + Stata + AI workflow guide
-- Tyler Ransom (OU) — tyleransom.substack.com
