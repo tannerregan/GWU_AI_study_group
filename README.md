@@ -7,7 +7,7 @@
 
 [![Sessions](https://img.shields.io/badge/Sessions-6-7B2D8B?style=flat-square)](/)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)](/)
-[![Languages](https://img.shields.io/badge/Code-Python%20%7C%20Stata%20%7C%20R-blue?style=flat-square)](/)
+[![Languages](https://img.shields.io/badge/Code-LaTex%20%7C%20Python%20%7C%20Stata%20%7C%20R-blue?style=flat-square)](/)
 
 </div>
 
@@ -40,9 +40,6 @@ GWU_AI_study_group/
 ├── 📂 notes/        # Syllabus and planning notes
 └── 📂 tables/       # Output tables
 ```
-
-> ⚠️ **Datasets are not stored here** — use GW Box or Dropbox for data files.
-
 ---
 
 ## 📖 Key References
@@ -50,6 +47,7 @@ GWU_AI_study_group/
 | Person | Affiliation | Resource |
 |--------|-------------|----------|
 | **Anton Korinek** | UVA | NBER WP 34202 · [GenAIforEcon.org](https://genaiformecon.org) |
-| **Aniket Panjwani** | — | YouTube tutorials on Claude Code for social scientists |
-| **Paul Goldsmith-Pinkham** | Yale | VS Code + Stata + AI workflow guide |
+| **Aniket Panjwani** | — | YouTube tutorials on Claude Code for social scientists [youtube.com/@aniketapanjwani](https://www.youtube.com/@aniketapanjwani) |
+| **Paul Goldsmith-Pinkham** | Yale | [paulgp.substack.com/p/getting-started-with-claude-code](https://paulgp.substack.com/p/getting-started-with-claude-code) |
+| **Claes Bäckman** | Leibniz Institute SAFE | [claesbackman.com/claude-code-guide.html](https://claesbackman.com/claude-code-guide.html) |
 | **Tyler Ransom** | OU | [tyleransom.substack.com](https://tyleransom.substack.com) |
