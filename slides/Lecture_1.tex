@@ -271,107 +271,6 @@
 \end{frame}
 
 
-\section{\textcolor{violet}{Claude Code / Codex Interfaces \vspace{0.3in}}}
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Three Ways to Use an Agentic Coding Tool}
-
-\begin{itemize}
-    \item \textbf{Terminal} (command line):
-        \begin{itemize}
-            \item[$\circ$] Most powerful; works directly in your project directory
-            \item[$\circ$] Best for: running scripts, data analysis, replication tasks
-        \end{itemize}
-    \item \textbf{Desktop App}:
-        \begin{itemize}
-            \item[$\circ$] Friendlier interface; easier to get started
-            \item[$\circ$] Projects feature: persistent context across sessions
-            \item[$\circ$] Best for: drafting, quick questions, early exploration
-        \end{itemize}
-    \item \textbf{VS Code integration}:
-        \begin{itemize}
-            \item[$\circ$] Agent lives inside your editor --- see code and AI side by side
-            \item[$\circ$] Best for: sustained development work, Git integration, Jupyter/Python
-        \end{itemize}
-\end{itemize}
-
-\end{frame}
-
-
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Terminal vs.\ VS Code: Quick Comparison}
-
-\begin{columns}[t]
-\column{0.5\textwidth}
-\textbf{Terminal (CLI)}
-\vspace{.05in}
-\begin{itemize}
-    \item Lightweight; fast startup
-    \item Works anywhere, incl.\ remote servers
-    \item Keyboard-driven; fast for quick tasks
-    \item No inline diffs; steeper setup
-\end{itemize}
-
-\column{0.5\textwidth}
-\textbf{VS Code Extension}
-\vspace{.05in}
-\begin{itemize}
-    \item Inline diffs; accept changes block-by-block
-    \item Code \& AI panel side by side
-    \item Best for large codebases, sustained work
-    \item Heavier on CPU and memory
-\end{itemize}
-\end{columns}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Live Demo: Terminal}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- minimal text, walk through live}}
-    \item Navigate to a project directory
-    \item Ask Claude Code to describe what it sees
-    \item Ask it to write a simple data task
-\end{itemize}
-
-\end{frame}
-
-
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Live Demo: Desktop App}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- minimal text, walk through live}}
-    \item Create a Project and load context
-    \item Same task as terminal --- compare experience
-\end{itemize}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Live Demo: VS Code}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- walk through VS Code interface live}}
-    \item Same task as terminal --- compare experience
-
-\end{itemize}
-
-\end{frame}
-
-
 
 \section{\textcolor{violet}{Contex Engineering with Claude Overview \vspace{0.3in}}}
 
@@ -556,6 +455,87 @@
 
 
 
+\section{\textcolor{violet}{Claude Code / Codex Interfaces \vspace{0.3in}}}
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Three Ways to Use an Agentic Coding Tool}
+
+\begin{itemize}
+    \item \textbf{Terminal} (command line):
+        \begin{itemize}
+            \item[$\circ$] Most powerful; works directly in your project directory
+            \item[$\circ$] Best for: running scripts, data analysis, replication tasks
+        \end{itemize}
+    \item \textbf{Desktop App}:
+        \begin{itemize}
+            \item[$\circ$] Friendlier interface; easier to get started
+            \item[$\circ$] Projects feature: persistent context across sessions
+            \item[$\circ$] Best for: drafting, quick questions, early exploration
+        \end{itemize}
+    \item \textbf{VS Code integration}:
+        \begin{itemize}
+            \item[$\circ$] Agent lives inside your editor --- see code and AI side by side
+            \item[$\circ$] Best for: sustained development work, Git integration, Jupyter/Python
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Terminal vs.\ VS Code: Quick Comparison}
+
+\begin{columns}[t]
+\column{0.5\textwidth}
+\textbf{Terminal (CLI)}
+\vspace{.05in}
+\begin{itemize}
+    \item Lightweight; fast startup
+    \item Works anywhere, incl.\ remote servers
+    \item Keyboard-driven; fast for quick tasks
+    \item No inline diffs; steeper setup
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{VS Code Extension}
+\vspace{.05in}
+\begin{itemize}
+    \item Inline diffs; accept changes block-by-block
+    \item Code \& AI panel side by side
+    \item Best for large codebases, sustained work
+    \item Heavier on CPU and memory
+\end{itemize}
+\end{columns}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Live Demo: Terminal}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Live Demo: Desktop App}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Live Demo: VS Code}
+
+\end{frame}
+
+
+
+
+
 \section{\textcolor{violet}{VS Code with Claude Overview \vspace{0.3in}}}
 
 
@@ -719,14 +699,17 @@
     \begin{itemize}
         \item \textbf{Repository (repo)}: a folder whose history Git is tracking
         \item \textbf{Commit}: a snapshot of the code at a point in time, with a descriptive message
-        \item \textbf{Push / Pull / Sync}: sync your local repo with the online/remote copy
+        \item \textbf{Sync}: Pushes and pulls at the same time, so both repos are up to date
     \end{itemize}\vfill
-    \item Other concepts, less critical to understand at the start:
+    \item Slightly more advanced concepts {\color{gray}(learn these when you need them)}
     \begin{itemize}
-        \item \textbf{Branch}: a parallel version of the code for exploration
+        \item \textbf{Push}: sends changes up from your local repo to online/remote repo
+        \item \textbf{Pull}: brings changes down to your local repo from online/remote repo
+        \item \textbf{Branch}: a parallel version of the code (useful for exploration and RA work)
         \item \textbf{Merge}: fold a branch back into the main code
-        \item \textbf{Clone}: copy your online repo to local computer for the first time
-        \item \textbf{Fork}: copy someone else's online repo to your own GitHub account
+        \item \textbf{Pull request}: propose to merge one branch to another (e.g. main)
+        \item \textbf{Clone}: copy an online repo to local computer for initial setup
+        \item \textbf{Fork}: copy an online repo to your own GitHub account
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -755,9 +738,9 @@
     \textbf{GitHub} \textemdash{} online hosting platform
     \begin{itemize}
         \item Stores a remote copy of your repo
-        \item Handles \textit{Push}, \textit{Pull}, \textit{Clone}, \textit{Fork}
-        \item Free unlimited private repos
         \item Alternatives: GitLab, Bitbucket
+        \item Remote endpoint for \textit{Push}, \textit{Pull}, \textit{Clone}; introduces \textit{Fork}
+        %\item Free unlimited private repos
     \end{itemize}
 \end{column}
 \end{columns}
@@ -768,22 +751,22 @@
 \begin{frame}
 \frametitle{Typical Git workflows for an economist}
 \begin{itemize}
-    \item Typical workflow for an economist:
+    \item Typical workflow for an economist {\color{gray}(alone or with trusted RA)}
     \begin{enumerate}
         \item Pull/Sync code at start of work session (get latest version of online repo)
         \item Work on code; when something works, {\it commit} it with a descriptive message
         \item Push/Sync at end of work session (updates the online repo)
     \end{enumerate}\vfill
-    \item More elaborate, with RA review
+    \item More elaborate, with explicit RA review
     \begin{enumerate}
-        \item RA pulls repo,creates a branch from the latest commit
-        \item RA works on branch, makes commits and pushes it when finished
-        \item You compare the branch to the main branch
+        \item RA syncs and then creates a new branch
+        \item RA works on branch, makes commits and makes a pull request
+        \item You review the pull request (compare the branch to main)
         \begin{itemize}
-            \item recall git highlights all the differences line by line and flags conflicts
+            \item recall git highlights differences line by line and flags conflicts %(\hlcode{Diff})
         \end{itemize}
-        \item You merge back into main branch, or ask RA for fixes 
-        \item Push/Sync to update the online repo
+        \item You merge back into {\it remote} main branch, or ask RA for fixes 
+        \item Pull/Sync to update your local repo
     \end{enumerate} 
 \end{itemize}
 \end{frame}
@@ -848,6 +831,7 @@
     \begin{itemize}
         \item[$\circ$] instead store in \href{https://it.gwu.edu/box}{Box} (GW-endorsed secure storage)
         \item[$\circ$] or locally, Dropbox, Google Drive, etc.
+        \item[] alternatively, write a \hlcode{.gitignore} file that tells git to ignore specific subfolders (e.g. \hlcode{/data})
     \end{itemize}
     \smallskip
     \item \textbf{Do} store all other project materials 
