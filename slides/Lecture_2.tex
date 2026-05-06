@@ -17,32 +17,32 @@
 \begin{enumerate}
     \item Coding with Claude Code overview
     \begin{itemize}
-        \item Writing and debugging code from plain English
-        \item ``Vibe coding'': building a complete tool without writing a line of code
+        \item Writing and debugging code from plain English {\color{gray}\it EK}
+        \item ``Vibe coding'': building a complete tool without writing a line of code {\color{gray}\it EK}
     \end{itemize}
 
     \item Data analysis demos with Stata
     \begin{itemize}
-        \item Stata example with Claude Code from terminal
-        \item Stata example with Claude Code from VS Code
+        \item Stata example with Claude Code from terminal {\color{gray}\it EK}
+        \item Stata example with Claude Code from VS Code {\color{gray}\it TR}
     \end{itemize}
 
     \item Python in VS Code overview
     \begin{itemize}
-        \item libraries and environments
-        \item Jupyter extension
+        \item libraries and environments {\color{gray}\it TR}
+        \item Jupyter extension {\color{gray}\it TR}
     \end{itemize}
-    
+
     \item Data analysis demo with Python
     \begin{itemize}
-        \item Python example with Claude Code from VS Code
+        \item Python example with Claude Code from VS Code {\color{gray}\it TR}
     \end{itemize}
 \end{enumerate}
 
 \end{frame}
 
 
-\section{\textcolor{violet}{Writing and Debugging Code with AI \vspace{0.3in}}}
+\section{\textcolor{violet}{Coding with Claude Code overview \vspace{0.3in}}}
 
 
 %%%%%%%%%%%%%%
@@ -131,12 +131,9 @@
 \end{frame}
 
 
-\section{\textcolor{violet}{Working with Claude Code: Ask, Plan, Auto \vspace{0.3in}}}
-
-
 %%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Three Modes of Operation}
+\frametitle{Recap: Three Modes of Operation}
 
 \begin{itemize}
     \item \textbf{Ask before edits} (safest):
@@ -157,21 +154,6 @@
             \item[$\circ$] Claude acts autonomously until the task is done
             \item[$\circ$] Use for well-defined tasks; always check the output
         \end{itemize}
-\end{itemize}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Managing Your Session: Key Commands}
-
-\begin{itemize}
-    \item \texttt{/compact <hint>} --- compress context before it overflows; hint steers what Claude keeps
-    \item \texttt{/clear} --- fresh start, zero accumulated context; you choose what to carry forward
-    \item \textbf{Plan mode} before long tasks --- Claude writes a plan first; avoids wasted runs
-    \item \textbf{CLAUDE.md} --- store standing project instructions so Claude knows your setup from the start
-    \item Scope to specific files --- ``look only at \texttt{clean.do}'' cuts tokens and sharpens focus
 \end{itemize}
 
 \end{frame}
@@ -243,54 +225,6 @@
 \end{frame}
 
 
-\section{\textcolor{violet}{Project Structure and Replication \vspace{0.3in}}}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Project Folder Structure --- Best Practices}
-
-\begin{itemize}
-    \item Recommended structure for a research project:
-        \begin{itemize}
-            \item[$\circ$] \texttt{/raw\_data} --- original data, never modified
-            \item[$\circ$] \texttt{/data} --- cleaned/analysis data (Git-ignored if sensitive)
-            \item[$\circ$] \texttt{/code} --- all scripts, tracked by Git
-            \item[$\circ$] \texttt{/output} --- tables and figures (regenerated, not tracked)
-            \item[$\circ$] \texttt{/paper} --- LaTeX files
-        \end{itemize}
-    \item Handling secure/restricted data (GW Box, FSRDC):
-        \begin{itemize}
-            \item[$\circ$] Raw data lives on Box or secure server; code lives on Git
-            \item[$\circ$] \texttt{.gitignore} ensures data never enters the repo
-            \item[$\circ$] README documents where raw data comes from and access requirements
-        \end{itemize}
-\end{itemize}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{CLAUDE.md: Persistent Instructions for Claude Code}
-
-\begin{itemize}
-    \item CLAUDE.md is a plain-text file in your project folder that Claude reads at the start of every session
-    \item Use it to store standing instructions so you do not repeat yourself:
-        \begin{itemize}
-            \item[$\circ$] Language and style preferences (``always use Stata 17 syntax'', ``comment every merge'')
-            \item[$\circ$] Data structure (``the unit of observation is person-year; key vars are \texttt{id} and \texttt{year}'')
-            \item[$\circ$] File paths (``raw data is in \texttt{/Box/Project/raw/}'')
-            \item[$\circ$] Rules (``never modify files in \texttt{/raw\_data}'')
-        \end{itemize}
-    \vspace{.05in}
-    \item Claude Code ``Skills'': project-level or global instruction sets --- similar concept
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo: write a CLAUDE.md live}}
-\end{itemize}
-
-\end{frame}
-
-
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Building a Replication Package with Claude Code}
@@ -311,140 +245,7 @@
 \end{frame}
 
 
-\section{\textcolor{violet}{Git and Coauthor Workflows in VS Code \vspace{0.3in}}}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Using Git in VS Code}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
-    \item The Source Control panel: see all changed files, stage, commit, push
-    \item Typical session workflow:
-        \begin{enumerate}
-            \item Pull latest version from GitHub at start of session
-            \item Write code; Claude Code helps
-            \item Stage changed files; write a commit message (or ask Claude to write it)
-            \item Push to GitHub at end of session
-        \end{enumerate}
-    \item Branches for robustness checks:
-        \begin{itemize}
-            \item[$\circ$] Create a branch for ``alternative\_sample''
-            \item[$\circ$] Run the checks; if they hold, merge back into main
-        \end{itemize}
-\end{itemize}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Working with Coauthors and RAs}
-
-\begin{itemize}
-    \item All coauthors clone the same GitHub repo --- everyone has the same code
-    \item RA workflow:
-        \begin{itemize}
-            \item[$\circ$] RA works on a branch; submits a ``pull request'' when done
-            \item[$\circ$] You review the changes before they enter the main code
-            \item[$\circ$] If something breaks, you can always roll back
-        \end{itemize}
-    \item Common pitfalls:
-        \begin{itemize}
-            \item[$\circ$] Merge conflicts: two people edit the same file --- Git flags the conflict; Claude Code can resolve it
-            \item[$\circ$] Committing data files accidentally --- prevent with \texttt{.gitignore}
-        \end{itemize}
-    \vspace{.05in}
-    \item Overleaf integration: sync your LaTeX repo so the paper drafts with the code
-\end{itemize}
-
-\end{frame}
-
-
-\section{\textcolor{violet}{Python and Jupyter in VS Code \vspace{0.3in}}}
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Python in VS Code: Environments}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
-    \item Anaconda manages Python installations and packages
-    \item Each project gets its own \textbf{environment}: a fixed set of packages and versions
-        \begin{itemize}
-            \item[$\circ$] Prevents conflicts between projects
-            \item[$\circ$] Ensures others can reproduce your results exactly
-        \end{itemize}
-    \item Ask Claude Code to create and activate an environment for you
-\end{itemize}
-%https://claesbackman.com/claude-code-guide.html#:~:text=of%20Economics.-,Python,-ms%2Dpython.python
-\end{frame}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Running Python Code with Jupyter}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
-    \item Three modes in VS Code:
-        \begin{itemize}
-            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
-            \item[$\circ$] \textbf{Interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
-            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
-        \end{itemize}
-    \item Claude Code can write, run, and debug Python in any of these modes
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Python Setup in VS Code}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
-    \item Required extensions: Python, Jupyter
-    \item Managing environments:
-        \begin{itemize}
-            \item[$\circ$] Each project gets its own environment (set of packages + versions)
-            \item[$\circ$] Prevents conflicts between projects
-            \item[$\circ$] Ask Claude Code to create and activate an environment for you
-        \end{itemize}
-    \item Running code:
-        \begin{itemize}
-            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
-            \item[$\circ$] \textbf{Jupyter interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
-            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
-        \end{itemize}
-\end{itemize}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Python for Economists: Common Tasks}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Placeholder: example or screenshot}}
-    \item Data analysis with \texttt{pandas}: merging, collapsing, reshaping --- analogous to Stata
-    \item Econometrics: \texttt{statsmodels}, \texttt{linearmodels} (panel data, IV)
-    \item Data collection: \texttt{requests}, \texttt{BeautifulSoup} for scraping (Session 3)
-    \item Figures: \texttt{matplotlib}, \texttt{seaborn} --- publication-quality plots
-    \vspace{.05in}
-    \item Claude Code can translate your Stata code to Python (or vice versa) --- useful for:
-        \begin{itemize}
-            \item[$\circ$] Running analyses you cannot do in Stata
-            \item[$\circ$] Working with large datasets where Python is faster
-        \end{itemize}
-\end{itemize}
-
-\end{frame}
-
-
-\section{\textcolor{violet}{Stata with Claude Code \vspace{0.3in}}}
+\section{\textcolor{violet}{Data analysis demos with Stata \vspace{0.3in}}}
 
 
 %%%%%%%%%%%%%%
@@ -485,6 +286,111 @@
 \end{itemize}
 
 \end{frame}
+
+
+\section{\textcolor{violet}{Python in VS Code overview \vspace{0.3in}}}
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Why Python?}
+
+\begin{itemize}
+    \item 
+\end{itemize}
+Python for Economists: Common Tasks
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Placeholder: example or screenshot}}
+    \item Data analysis with \texttt{pandas}: merging, collapsing, reshaping --- analogous to Stata
+    \item Econometrics: \texttt{statsmodels}, \texttt{linearmodels} (panel data, IV)
+    \item Data collection: \texttt{requests}, \texttt{BeautifulSoup} for scraping (Session 3)
+    \item Figures: \texttt{matplotlib}, \texttt{seaborn} --- publication-quality plots
+    \vspace{.05in}
+    \item Claude Code can translate your Stata code to Python (or vice versa) --- useful for:
+        \begin{itemize}
+            \item[$\circ$] Running analyses you cannot do in Stata
+            \item[$\circ$] Working with large datasets where Python is faster
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Python basics}
+
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Libraries and Environments}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
+    \item Anaconda manages Python installations and packages
+    \item Each project gets its own \textbf{environment}: a fixed set of packages and versions
+        \begin{itemize}
+            \item[$\circ$] Prevents conflicts between projects
+            \item[$\circ$] Ensures others can reproduce your results exactly
+        \end{itemize}
+    \item Ask Claude Code to create and activate an environment for you
+\end{itemize}
+%https://claesbackman.com/claude-code-guide.html#:~:text=of%20Economics.-,Python,-ms%2Dpython.python
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Python Setup in VS Code}
+
+\begin{itemize}
+    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
+    \item Required extensions: Python, Jupyter
+    \item Managing environments:
+        \begin{itemize}
+            \item[$\circ$] Each project gets its own environment (set of packages + versions)
+            \item[$\circ$] Prevents conflicts between projects
+            \item[$\circ$] Ask Claude Code to create and activate an environment for you
+        \end{itemize}
+    \item Running code:
+        \begin{itemize}
+            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
+            \item[$\circ$] \textbf{Jupyter interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
+            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Running Python Code with Jupyter}
+
+\begin{itemize}
+    \item Three modes in VS Code:
+        \begin{itemize}
+            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
+            \item[$\circ$] \textbf{Interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
+            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
+        \end{itemize}
+    \item Claude Code can write, run, and debug Python in any of these modes
+\end{itemize}
+
+\end{frame}
+
+
+\section{Data Analysis Demos with Python \vspace{0.3in}}
+
+
+
+
+
+
 
 
 \section{\textcolor{violet}{Wrapping Up \vspace{0.3in}}}
