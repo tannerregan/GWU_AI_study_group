@@ -453,6 +453,31 @@
 \end{frame}
 
 
+\begin{frame}{Files and Data that Claude is good at reading}
+\begin{itemize}
+    \item Claude Code works best with plain text files
+    \begin{itemize}
+        \item e.g. \texttt{.txt}, \texttt{.do}, \texttt{.py}, \texttt{.tex}, \texttt{.csv}, \texttt{.log}, \texttt{.md}, etc.
+    \end{itemize}
+    \item Tips for optimial performance with other file types
+    \begin{itemize}
+        \item \texttt{.docx}: convert to markdown with \hlcode{pandoc file.docx -o file.md}
+        \item \texttt{.xlsx}, \texttt{.dta}, \texttt{.rds}, \texttt{.sav}: convert to CSV first with a short script
+        \item \texttt{.pdf}:  
+        \begin{itemize}
+            \item Use the \texttt{.tex} file whenever possible (especially if equations and tables)
+            \item Long PDFs (50+ pages): convert to markdown first
+            \item Scanned PDFs: run OCR first, then convert to markdown
+        \end{itemize}
+        \end{itemize}
+    \item Create a skill that loads file types, e.g. \hlcode{/pdf-to-markdown}
+\end{itemize}
+\vfill
+\footnotesize Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=What\%20Claude\%20Code\%20Can\%20Read\%20\%E2\%80\%94\%20and\%20What\%20to\%20Convert\%20First
+}{Claes Backman's Guide} (details on handling different file types)
+
+\end{frame}
+
 
 
 \section{\textcolor{violet}{Claude Code / Codex Interfaces \vspace{0.3in}}}
@@ -634,31 +659,6 @@
         \includegraphics[width=\linewidth, height=0.82\textheight, keepaspectratio]{../figures/screenshots/claude_window.png}
     \end{column}
 \end{columns}
-\end{frame}
-
-\begin{frame}{Files and Data that Claude is good at reading}
-\begin{itemize}
-    \item Claude Code works best with plain text files
-    \begin{itemize}
-        \item e.g. \texttt{.txt}, \texttt{.do}, \texttt{.py}, \texttt{.tex}, \texttt{.csv}, \texttt{.log}, \texttt{.md}, etc.
-    \end{itemize}
-    \item Tips for optimial performance with other file types
-    \begin{itemize}
-        \item \texttt{.docx}: convert to markdown with \hlcode{pandoc file.docx -o file.md}
-        \item \texttt{.xlsx}, \texttt{.dta}, \texttt{.rds}, \texttt{.sav}: convert to CSV first with a short script
-        \item \texttt{.pdf}:  
-        \begin{itemize}
-            \item Use the \texttt{.tex} file whenever possible (especially if equations and tables)
-            \item Long PDFs (50+ pages): convert to markdown first
-            \item Scanned PDFs: run OCR first, then convert to markdown
-        \end{itemize}
-        \end{itemize}
-    \item Create a skill that loads file types, e.g. \hlcode{/pdf-to-markdown}
-\end{itemize}
-\vfill
-\footnotesize Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=What\%20Claude\%20Code\%20Can\%20Read\%20\%E2\%80\%94\%20and\%20What\%20to\%20Convert\%20First
-}{Claes Backman's Guide} (details on handling different file types)
-
 \end{frame}
 
 
@@ -983,6 +983,31 @@ Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=VERS
     \item Questions on tools, concepts, or setup?
     \item Thoughts on how this fits your current workflow?
 \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}
+
+\frametitle{Questions from workshop 1 to consider exploring in later sessions:}
+\begin{enumerate}
+    \item How can we get `stable' or `replicable' results from Claude or LLMs in general? 
+    \begin{itemize}
+        \item Partly why CC is attractive - code is verifiable and generates replicable results
+        \item What is the state of the literature on this?
+        \item Can `temperature' be set with Claude Code?
+    \end{itemize}
+    \item Compare Codex and Claude more closely (Paul GP uses both simultaneously)
+    \item Accessing a remote server and using Claude in same workflow.     
+    \begin{itemize}
+        \item Does Claude need to be installed on the server? I think no. 
+        \item How to set up VS Code with a remote server
+        \begin{itemize}
+            \item both Claes Backman and Paul GP mention this
+        \end{itemize}
+        \item Working with GW specific resources: \href{https://it.gwu.edu/caaren}{CAAREN}, \href{https://it.gwu.edu/hpc}{High Performance Computing (HPC)}, \href{https://it.gwu.edu/research-cloud}{Research Cloud}, \href{https://it.gwu.edu/research-storage-nas}{Research Storage (NAS)}, \href{https://library.gwu.edu/VCL}{Virtual Computer Lab (VCL)
+, e.g. Stata}, etc.
+    \end{itemize}
+\end{enumerate}
 
 \end{frame}
 
