@@ -384,11 +384,41 @@ Python for Economists: Common Tasks
 \end{frame}
 
 
-\section{Data Analysis Demos with Python \vspace{0.3in}}
+\section{Data Analysis Demo with Python \vspace{0.3in}}
 
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Python Exercise}
 
+\begin{itemize}
+    \item Download data from Kigali City
+    \item Download data from Alpha Earth
+    \item Visualize source data
+    \item Build a sample frame
+    \item Visualize the sample frame
+\end{itemize}
 
+\end{frame}
 
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Download data from Kigali City}
+
+\begin{enumerate}
+    \item Wrote out the prompt "Prompt data scraping for Kigali.md"
+    \item Claude generated the plan \href{https://github.com/tannerregan/GWU_AI_study_group/blob/main/code/lecture_2/python_demo/kigali-city-data-mutable-frost.md}{"kigali-city-data-mutable-frost.md"} ($\sim$10 mins)
+    \item Ran it without edits (using Jupyter window). Two issues: 
+    \begin{itemize}
+        \item Claude added packages to the yml but didn't update the conda environment. Chatting with Claude we identified this andfixed it. Told claude to update the project CLAUDE.md file so that it always: (1) updates the python environment with newly required packages, and (2) updates the .yml file so that the environment is perfectly replicable.
+        \item I had to leave for daycare pickup and the code was still running. 
+- I told Claude "the script is running. I need to close my laptop and go home. Can I pause the script and restart it without disrupting the download?"
+-CC: "The script has no resume logic — if you stop and restart it, it will re-download everything from scratch, including layers already completed. The fix is simple: add a file-exists check so it skips layers that are already on disk. Want me to add that now before you leave? It's a two-line change per download function and would make the restart seamless."
+- CC updated the script so I could go home. SHOW: GitHub Diff between the two files.
+    \end{itemize}
+    \item Ran the updated script at home and the rest downloaded
+\end{enumerate}
+
+\end{frame}
 
 
 
@@ -435,23 +465,6 @@ Python for Economists: Common Tasks
 
 \end{frame}
 
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Resources}
-
-\begin{itemize}
-    \item Anton Korinek (UVA) --- \textit{NBER WP 34202} and GenAIforEcon.org
-    \item Aniket Panjwani --- YouTube tutorials on Claude Code for social scientists
-    \item Paul Goldsmith-Pinkham --- practical guide on VS Code + Stata + AI
-    \item Tyler Ransom --- \textit{tyleransom.substack.com}: honest account of daily AI use
-    \vspace{.05in}
-    \item Setup guide for this course: [PLACEHOLDER --- link or shared folder]
-    \item CLAUDE.md template: [PLACEHOLDER]
-    \item Replication package example: [PLACEHOLDER]
-\end{itemize}
-
-\end{frame}
 
 
 %%%%%%%%%%%%%%
