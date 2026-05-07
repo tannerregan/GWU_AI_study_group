@@ -1,6 +1,10 @@
 \documentclass[aspectratio=169, 12pt]{beamer}
 \input{_preamble.tex}
 
+% ---------- URL shortcuts ----------
+\newcommand{\ghLtwo}{https://tannerregan.github.io/GWU_AI_study_group/code/lecture_2/}
+% -----------------------------------
+
 \begin{document}
 \linespread{1.3}
 
@@ -293,13 +297,14 @@
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Why Python?}
+%https://claesbackman.com/claude-code-guide.html#:~:text=of%20Economics.-,Python,-ms%2Dpython.python
 
 \begin{itemize}
     \item 
 \end{itemize}
 Python for Economists: Common Tasks
+
 \begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Placeholder: example or screenshot}}
     \item Data analysis with \texttt{pandas}: merging, collapsing, reshaping --- analogous to Stata
     \item Econometrics: \texttt{statsmodels}, \texttt{linearmodels} (panel data, IV)
     \item Data collection: \texttt{requests}, \texttt{BeautifulSoup} for scraping (Session 3)
@@ -311,36 +316,34 @@ Python for Economists: Common Tasks
             \item[$\circ$] Working with large datasets where Python is faster
         \end{itemize}
 \end{itemize}
-
 \end{frame}
 
 
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Python basics}
-
 \begin{itemize}
-    \item 
-\end{itemize}
+    \item Libraries and Environments
+    \begin{itemize}
+        \item Anaconda manages Python installations and packages
+        \item Each project gets its own \textbf{environment}: a fixed set of packages and versions
+            \begin{itemize}
+                \item[$\circ$] Prevents conflicts between projects
+                \item[$\circ$] Ensures others can reproduce your results exactly
+            \end{itemize}
+        \item Ask Claude Code to create and activate an environment for you
+    \end{itemize}
 
-\end{frame}
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Libraries and Environments}
-
-\begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
-    \item Anaconda manages Python installations and packages
-    \item Each project gets its own \textbf{environment}: a fixed set of packages and versions
+    \item Three ways to run Python code
         \begin{itemize}
-            \item[$\circ$] Prevents conflicts between projects
-            \item[$\circ$] Ensures others can reproduce your results exactly
+            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
+            \item[$\circ$] \textbf{Interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
+            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
         \end{itemize}
-    \item Ask Claude Code to create and activate an environment for you
 \end{itemize}
-%https://claesbackman.com/claude-code-guide.html#:~:text=of%20Economics.-,Python,-ms%2Dpython.python
 \end{frame}
+
+
 
 
 %%%%%%%%%%%%%%
@@ -367,24 +370,28 @@ Python for Economists: Common Tasks
 \end{frame}
 
 
+\section{Data Analysis Demo with Python \vspace{0.3in}}
+
+
 %%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Running Python Code with Jupyter}
-
-\begin{itemize}
-    \item Three modes in VS Code:
+    \begin{center}
+        \color{red}\bf I AM IMPRESSED
+    \end{center}
+    \pause
+    \begin{itemize}
+        \item This example took about 2.5 days of my work
+        \item Before Claude Code:  
         \begin{itemize}
-            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
-            \item[$\circ$] \textbf{Interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
-            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
+            \item 2-4 weeks of my time
+            \item 1-2 months of very good PhD RA time
+            \item 2+ months of decent MS RA time.
         \end{itemize}
-    \item Claude Code can write, run, and debug Python in any of these modes
-\end{itemize}
-
+        \item Claude solution still more efficient and elegant
+        \item More discussion later...
+    \end{itemize}
 \end{frame}
 
-
-\section{Data Analysis Demo with Python \vspace{0.3in}}
 
 %%%%%%%%%%%%%%
 \begin{frame}
@@ -405,21 +412,68 @@ Python for Economists: Common Tasks
 \frametitle{Download data from Kigali City}
 
 \begin{enumerate}
-    \item Wrote out the prompt "Prompt data scraping for Kigali.md"
-    \item Claude generated the plan \href{https://github.com/tannerregan/GWU_AI_study_group/blob/main/code/lecture_2/python_demo/kigali-city-data-mutable-frost.md}{"kigali-city-data-mutable-frost.md"} ($\sim$10 mins)
-    \item Ran it without edits (using Jupyter window). Two issues: 
+    \item Wrote \href{\ghLtwo/python_demo/Prompt data scraping for Kigali}{Prompt data scraping for Kigali.md} pasted into ``plan mode''
     \begin{itemize}
-        \item Claude added packages to the yml but didn't update the conda environment. Chatting with Claude we identified this andfixed it. Told claude to update the project CLAUDE.md file so that it always: (1) updates the python environment with newly required packages, and (2) updates the .yml file so that the environment is perfectly replicable.
-        \item I had to leave for daycare pickup and the code was still running. 
-- I told Claude "the script is running. I need to close my laptop and go home. Can I pause the script and restart it without disrupting the download?"
--CC: "The script has no resume logic — if you stop and restart it, it will re-download everything from scratch, including layers already completed. The fix is simple: add a file-exists check so it skips layers that are already on disk. Want me to add that now before you leave? It's a two-line change per download function and would make the restart seamless."
-- CC updated the script so I could go home. SHOW: GitHub Diff between the two files.
+        \item I had to give permission on a few steps, e.g. searching URLs.
     \end{itemize}
-    \item Ran the updated script at home and the rest downloaded
-\end{enumerate}
+    \item Claude generated the plan \href{\ghLtwo/python_demo/kigali-city-data-mutable-frost}{kigali-city-data-mutable-frost.md} ($\sim$10 mins)
+    \item Executed the plan which created the script \href{\ghLtwo/python_demo/download_kigali_gis_v0.py}{download\_kigali\_gis\_v0.py}
 
+    \item Ran the code without edits (using Jupyter window). Two issues: 
+    \begin{itemize}
+        \item %Claude added packages to the yml but didn't update the conda environment. Chatting with Claude we identified this andfixed it. Told claude to update the project CLAUDE.md file so that it always: (1) updates the python environment with newly required packages, and (2) updates the .yml file so that the environment is perfectly replicable.
+        \item %I had to leave for daycare pickup and the code was still running. 
+%- I told Claude "the script is running. I need to close my laptop and go home. Can I pause the script and restart it without disrupting the download?"
+%-CC: "The script has no resume logic — if you stop and restart it, it will re-download everything from scratch, including layers already completed. The fix is simple: add a file-exists check so it skips layers that are already on disk. Want me to add that now before you leave? It's a two-line change per download function and would make the restart seamless."
+%- CC updated the script so I could go home. SHOW: GitHub Diff between the two files.
+    \end{itemize}
+    \item Ran the updated script \href{\ghLtwo/python_demo/download\_kigali\_gis.py}{download\_kigali\_gis.py} at home $\rightarrow$ success!
+\end{enumerate}
 \end{frame}
 
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Download data from Google Earth Engine}
+
+\begin{enumerate}
+    \item Wrote \href{\ghLtwo/python_demo/Prompt-data-scraping-Alpha-Earth}{Prompt-data-scraping-Alpha-Earth.md} pasted into ``plan mode''
+    \begin{itemize}
+        \item I had to give permission on a few steps, e.g. searching URLs.
+    \end{itemize}
+    \item Claude generated the plan \href{\ghLtwo/python_demo/alpha-earth-data-witty-planet.md}{alpha-earth-data-witty-planet.md} ($\sim$10 mins)
+    \item Executed the plan which created the script \href{\ghLtwo/python_demo/download_satellite_embedding_v0.py}{download\_satellite\_embedding\_v0.py}
+    \item Ran the code without edits (using Jupyter window).  issues: 
+    \begin{itemize}
+        \item Needed to add my GEE project code (ee-tannerregan-gwu)
+        \item More substantial errors appeared and I iterated with Claude to update the script to \href{\ghLtwo/python_demo/download_satellite_embedding_v1.py}{download\_satellite\_embedding\_v1.py}
+    \end{itemize}
+    \item Ran the updated script successfully
+    \item Asked Claude to revise the code now that we had iterated, simplify anything that we had added in the debugging/iterating rpocess. And make sure the script was generally well commented \href{\ghLtwo/python_demo/download_satellite_embedding.py}{download\_satellite\_embedding.py}
+\end{enumerate}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Implications for RAs and research students}
+
+\begin{itemize}
+    \item My willingness to pay for PhD and MS student RAs is way down
+    \item Conditional on working with an RA, task allocation will change:
+    \begin{itemize}
+        \item $\downarrow$ More menial tasks like ugrad RA {\color{gray}(data collection, subjective classification, etc.)}
+        \item $\uparrow$  More high level conceptual tasks {\color{gray}(design survey questionnaires, design data cleaning / empirical strategy)}
+    \end{itemize} 
+    \item This has implications for students 
+    \begin{itemize}
+        \item they still need to know the fundamentals of coding to make CC productive, but training opportunities will become more scarce
+        \item Otherwise, RAships that focus more on high level conceptual tasks will probably help make them better researchers. But IMO requires higher RA ability and trust
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
 
 
 
