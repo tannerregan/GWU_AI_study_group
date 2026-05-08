@@ -1,0 +1,200 @@
+\documentclass[aspectratio=169]{beamer}
+% The shared preamble loads \usepackage{emoji} which requires LuaTeX.
+% Pretend it is already loaded so the \usepackage call is a no-op under pdflatex.
+\makeatletter\@namedef{ver@emoji.sty}{2022/01/01}\makeatother
+\input{_preamble/preamble_slides.tex}
+\usepackage{amsmath}
+
+% ==================================================
+% Metadata
+% ==================================================
+\title[Sample Frame \& Event Study]{Sample Frame Construction, Event Study \& Spillover Design}
+\author{
+  \textbf{Juliana Oliveira Cunha (LSE \& IGC)}\\[0.4em]
+  \small Joint with Martina Manara (UCL) and Tanner Regan (GWU)
+}
+\date{\today}
+
+\begin{document}
+
+% ==================================================
+% Title slide
+% ==================================================
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% ==================================================
+% Table of Contents
+% ==================================================
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+
+% ==================================================
+\section{Sample Frame Construction}
+% ==================================================
+
+% --------------------------------------------------
+% Step 1: Context maps
+% --------------------------------------------------
+\begin{frame}{Context map — OpenStreetMap}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_01a_context_osm.png}
+\end{frame}
+
+\begin{frame}{Context map — Satellite imagery}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_01b_context_satellite.png}
+\end{frame}
+
+% --------------------------------------------------
+% Step 2: Parcel selection
+% --------------------------------------------------
+\begin{frame}{Parcel size distribution}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_02a_plot_size_distribution.png}
+\end{frame}
+
+\begin{frame}{Parcel boundaries within 1\,km buffer}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_02b_plots_map.png}
+\end{frame}
+
+% --------------------------------------------------
+% Step 3: Land-use zoning
+% --------------------------------------------------
+\begin{frame}{Land-use zoning — Masterplan 2020}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_03_landuse_map.png}
+\end{frame}
+
+% --------------------------------------------------
+% Step 5: Propensity scores
+% --------------------------------------------------
+\begin{frame}{Propensity score map - google satellite embeddings}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_05a_propensity_map.png}
+\end{frame}
+
+\begin{frame}{Propensity score distribution}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_05b_propensity_distribution.png}
+\end{frame}
+
+% --------------------------------------------------
+% Step 6: Sample frame
+% --------------------------------------------------
+\begin{frame}{Sample frame — hexagonal grid (250 sqm)}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_06a_sample_frame_map.png}
+\end{frame}
+
+\begin{frame}{Sample frame — distance to project boundary}
+  \centering
+  \includegraphics[width=0.88\textwidth,height=0.82\textheight,keepaspectratio]
+    {../output/figures/mpazi_06b_distance_histogram.png}
+\end{frame}
+
+
+% ==================================================
+\section{Event Study}
+% ==================================================
+
+% --------------------------------------------------
+% Estimating equation
+% --------------------------------------------------
+\begin{frame}{Event study — specification}
+
+  \begin{block}{Estimating equation}
+    \begin{align*}
+      y_{it} \;=\; \alpha_i + \gamma_t
+        + \sum_{t \,\neq\, 2020} \beta_t
+            \cdot \Bigl(D_i \times \mathbf{1}[t]\Bigr)
+        + \varepsilon_{it}
+    \end{align*}
+  \end{block}
+
+  \vspace{0.5em}
+
+  \begin{itemize}
+    \item $i$ = pixel centroid;\quad $t$ = year (2017--2025)
+    \item $y_{it}$ = propensity score from \textbf{Google Satellite Embedding} for pixel $i$ in year $t$
+      \begin{itemize}
+        \item weights estimated using 2020 embeddings, applied to all years
+      \end{itemize}
+    \item $\alpha_i$ = pixel fixed effect;\quad $\gamma_t$ = year fixed effect
+    \item $D_i = 1$ if pixel centroid lies \textbf{inside} the project boundary, else 0
+    \item $\beta_t$: DiD coefficient for year $t$ relative to baseline 2020 \;($\beta_{2020} \equiv 0$)
+    \item Standard errors clustered by 100\,m distance bin
+  \end{itemize}
+
+\end{frame}
+
+% --------------------------------------------------
+% Event study figures — Propensity score
+% --------------------------------------------------
+
+  \begin{frame}[plain]
+    \centering
+    \includegraphics[width=\textwidth,height=0.92\textheight,keepaspectratio]
+      {../output/figures/event_study/mpazi_event_study_pscore.png}
+  \end{frame}
+
+% ==================================================
+\section{Spatial gradient}
+% ==================================================
+
+% --------------------------------------------------
+% Estimating equation
+% --------------------------------------------------
+\begin{frame}{Spatial gradient — specification}
+
+  \begin{block}{Estimating equation}
+    \begin{align*}
+      y_{it} \;=\; \alpha_i
+        + \sum_{d}\;\sum_{t \,\neq\, 2020} \beta_{d,t}
+            \cdot \Bigl(\mathbf{1}[\mathrm{bin}_i = d]
+                        \times \mathbf{1}[t]\Bigr)
+        + \varepsilon_{it}
+      \qquad
+      \tilde{\beta}_{d,t} \;=\; \beta_{d,t} - \beta_{d_{\max},\,t}
+    \end{align*}
+  \end{block}
+
+  \vspace{0.5em}
+
+  \begin{itemize}
+    \item $i$ = pixel centroid;\quad $t$ = year (2017--2025)
+    \item $y_{it}$ = propensity score from \textbf{Google Satellite Embedding} for pixel $i$ in year $t$
+      \begin{itemize}
+        \item probit model fitted on 2020 embeddings, applied to all years
+      \end{itemize}
+    \item $\alpha_i$ = pixel fixed effect;\quad year 2020 omitted for identification ($\beta_{d,2020} \equiv 0$)
+    \item $\mathrm{bin}_i$ = signed 100\,m distance bin (negative = inside project boundary)
+    \item $\tilde{\beta}_{d,t}$: re-centred so each year's line passes $y=0$ at the outermost bin ($d_{\max}$)
+    \item Standard errors clustered by 100\,m distance bin
+  \end{itemize}
+
+\end{frame}
+
+% --------------------------------------------------
+% Spatial gradient figures — Propensity score
+% --------------------------------------------------
+
+  \begin{frame}[plain]
+    \centering
+    \includegraphics[width=\textwidth,height=0.92\textheight,keepaspectratio]
+      {../output/figures/spatial_gradient/mpazi_spatial_gradient_pscore.png}
+  \end{frame}
+
+\end{document}

@@ -275,18 +275,20 @@
 
 %%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Stata Demo: Data Analysis with Claude Code}
+\frametitle{Stata in VS Code demo}
 
 \begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide}}
-    \item Task: \textcolor{gray}{\textit{[Placeholder: insert specific empirical example]}}
-    \item Walk-through:
-        \begin{enumerate}
-            \item Describe the dataset and goal to Claude in plain English
-            \item Claude writes the do-file; we run it
-            \item Inspect output, ask for revisions
-            \item Ask Claude to add comments and export a summary table
-        \end{enumerate}
+    \item Very quickly - how to run stata from VS Code
+    \begin{itemize}
+        \item Use the Stata Workbench Extension
+        \item Make sure the extension can `find' stata
+        \item Work (mostly) as normal
+        \begin{itemize}
+            \item Some things different, e.g. 'browse' needs to be done point and click.
+        \end{itemize}
+    \item Otherwise, Claude Code can work with Stata similarly to python
+    \end{itemize}
+    \textcolor{gray}{\textit{$\triangleright$ Stata \& VS Code Demo slide}}
 \end{itemize}
 
 \end{frame}
@@ -297,10 +299,10 @@
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Why Python?}
-%https://claesbackman.com/claude-code-guide.html#:~:text=of%20Economics.-,Python,-ms%2Dpython.python
+
 
 \begin{itemize}
-    \item 
+    \item \href{https://claesbackman.com/claude-code-guide.html\#:~:text=of\%20Economics.-,Python,-ms\%2Dpython.python}{Claes Backman}
 \end{itemize}
 Python for Economists: Common Tasks
 
@@ -349,9 +351,7 @@ Python for Economists: Common Tasks
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Python Setup in VS Code}
-
 \begin{itemize}
-    \item \textcolor{gray}{\textit{$\triangleright$ Demo slide --- Tanner}}
     \item Required extensions: Python, Jupyter
     \item Managing environments:
         \begin{itemize}
@@ -366,7 +366,6 @@ Python for Economists: Common Tasks
             \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
         \end{itemize}
 \end{itemize}
-
 \end{frame}
 
 
@@ -385,7 +384,7 @@ Python for Economists: Common Tasks
         \begin{itemize}
             \item 2-4 weeks of my time
             \item 1-2 months of very good PhD RA time
-            \item 2+ months of decent MS RA time.
+            \item 2+ months of decent MS RA time
         \end{itemize}
         \item Claude solution still more efficient and elegant
         \item More discussion later...
@@ -397,14 +396,13 @@ Python for Economists: Common Tasks
 \begin{frame}
 \frametitle{Python Exercise}
 
-\begin{itemize}
+Produced data (sampling frame for survey) and a \href{\ghLtwo/python_demo/4_slides_event_study.pdf}{set of slides} in four steps:
+\begin{enumerate}
     \item Download data from Kigali City
     \item Download data from Alpha Earth
-    \item Visualize source data
-    \item Build a sample frame
-    \item Visualize the sample frame
-\end{itemize}
-
+    \item Build a sample frame with visualization
+    \item Test an event study design with google satellite embeddings
+\end{enumerate}
 \end{frame}
 
 %%%%%%%%%%%%%%
@@ -421,15 +419,19 @@ Python for Economists: Common Tasks
 
     \item Ran the code without edits (using Jupyter window). Two issues: 
     \begin{itemize}
-        \item %Claude added packages to the yml but didn't update the conda environment. Chatting with Claude we identified this andfixed it. Told claude to update the project CLAUDE.md file so that it always: (1) updates the python environment with newly required packages, and (2) updates the .yml file so that the environment is perfectly replicable.
-        \item %I had to leave for daycare pickup and the code was still running. 
+        \item Claude added packages to the yml but didn't update the conda environment. Chatted with Claude to identify and fix this. %Told claude to update the project CLAUDE.md file so that it always: (1) updates the python environment with newly required packages, and (2) updates the .yml file so that the environment is perfectly replicable.
+        \item I had daycare pickup and the code was still running. Claude adjusted the code so it would restart where I left off, rather than restarting completely.
 %- I told Claude "the script is running. I need to close my laptop and go home. Can I pause the script and restart it without disrupting the download?"
 %-CC: "The script has no resume logic — if you stop and restart it, it will re-download everything from scratch, including layers already completed. The fix is simple: add a file-exists check so it skips layers that are already on disk. Want me to add that now before you leave? It's a two-line change per download function and would make the restart seamless."
-%- CC updated the script so I could go home. SHOW: GitHub Diff between the two files.
     \end{itemize}
     \item Ran the updated script \href{\ghLtwo/python_demo/download\_kigali\_gis.py}{download\_kigali\_gis.py} at home $\rightarrow$ success!
+    \begin{itemize}
+        \item VS Code diff: right-click script.py ``Select for Compare'', right-click script2.py ``Compare with Selected''. Gives a clean side-by-side diff in the editor.
+    \end{itemize}
 \end{enumerate}
 \end{frame}
+
+
 
 %%%%%%%%%%%%%%
 \begin{frame}
@@ -437,22 +439,66 @@ Python for Economists: Common Tasks
 
 \begin{enumerate}
     \item Wrote \href{\ghLtwo/python_demo/Prompt-data-scraping-Alpha-Earth}{Prompt-data-scraping-Alpha-Earth.md} pasted into ``plan mode''
-    \begin{itemize}
-        \item I had to give permission on a few steps, e.g. searching URLs.
-    \end{itemize}
+    %\begin{itemize}
+    %    \item I had to give permission on a few steps, e.g. searching URLs.
+    %\end{itemize}
     \item Claude generated the plan \href{\ghLtwo/python_demo/alpha-earth-data-witty-planet.md}{alpha-earth-data-witty-planet.md} ($\sim$10 mins)
-    \item Executed the plan which created the script \href{\ghLtwo/python_demo/download_satellite_embedding_v0.py}{download\_satellite\_embedding\_v0.py}
+    \item Executed the plan to create \href{\ghLtwo/python_demo/download_satellite_embedding_v0.py}{download\_satellite\_embedding\_v0.py}
     \item Ran the code without edits (using Jupyter window).  issues: 
     \begin{itemize}
         \item Needed to add my GEE project code (ee-tannerregan-gwu)
-        \item More substantial errors appeared and I iterated with Claude to update the script to \href{\ghLtwo/python_demo/download_satellite_embedding_v1.py}{download\_satellite\_embedding\_v1.py}
+        \item More substantial errors appeared, I iterated with Claude to make \href{\ghLtwo/python_demo/download_satellite_embedding_v1.py}{*\_v1.py}
     \end{itemize}
     \item Ran the updated script successfully
-    \item Asked Claude to revise the code now that we had iterated, simplify anything that we had added in the debugging/iterating rpocess. And make sure the script was generally well commented \href{\ghLtwo/python_demo/download_satellite_embedding.py}{download\_satellite\_embedding.py}
+    \item Asked Claude to revise the code now that we had iterated
+    \begin{itemize}
+        \item Simplify code lines from the debugging/iterating process and make sure well commented \href{\ghLtwo/python_demo/download_satellite_embedding.py}{download\_satellite\_embedding.py}
+    \end{itemize}
 \end{enumerate}
+\pause Check out VS Code Diff again!
 \end{frame}
 
 
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Build a sample frame with visualization}
+\begin{itemize}
+    \item Wrote out three prompts (took me longer to get started with this exercise)
+    \begin{itemize}
+        \item \href{\ghLtwo/python_demo/Prompt-prepare-sample-frame.md}{Prompt-prepare-sample-frame.md} (writes draft)
+        \begin{itemize}
+            \item wrote plan: \href{\ghLtwo/python_demo/make-a-plan-based-zippy-sprout.md}{make-a-plan-based-zippy-sprout.md} 
+        \end{itemize}
+        \item \href{\ghLtwo/python_demo/Prompt-round2-prepare-sample-frame.md}{Prompt-round2-prepare-sample-frame.md} (adjustments)
+        \begin{itemize}
+            \item lost track of this plan (sorry)
+        \end{itemize}
+        \item \href{\ghLtwo/python_demo/Prompt-round3-prepare-sample-frame.md}{Prompt-round3-prepare-sample-frame.md} (added one new step)
+        \begin{itemize}
+            \item wrote plan: \href{\ghLtwo/python_demo/create-a-plan-that-witty-cosmos.md}{create-a-plan-that-witty-cosmos.md} 
+        \end{itemize}
+    \end{itemize}
+    \item The final python script is \href{\ghLtwo/python_demo/prepare_sample_frame.py}{prepare\_sample\_frame.py}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Test an event study with satellite embeds}
+\begin{itemize}
+    \item Wrote a prompt to run a couple example designs
+    \begin{itemize}
+        \item \href{\ghLtwo/python_demo/Prompt-event-study.md}{Prompt-event-study.md} was my initial prompt
+        \item This time I did many iterations and didn't keep track (sorry)
+    \end{itemize}
+    \item The final python script was \href{\ghLtwo/python_demo/event_study.py}{event\_study.py}
+    \begin{itemize}
+        \item Claude also make the  \href{\ghLtwo/python_demo/4_slides_event_study.tex}{4\_slides\_event\_study.tex} that built the slides at the top of this section
+    \end{itemize}
+\end{itemize}
+\end{frame}
 
 
 %%%%%%%%%%%%%%
@@ -460,7 +506,7 @@ Python for Economists: Common Tasks
 \frametitle{Implications for RAs and research students}
 
 \begin{itemize}
-    \item My willingness to pay for PhD and MS student RAs is way down
+    \item My willingness to pay for PhD and MS student RAs is down
     \item Conditional on working with an RA, task allocation will change:
     \begin{itemize}
         \item $\downarrow$ More menial tasks like ugrad RA {\color{gray}(data collection, subjective classification, etc.)}
@@ -468,7 +514,7 @@ Python for Economists: Common Tasks
     \end{itemize} 
     \item This has implications for students 
     \begin{itemize}
-        \item they still need to know the fundamentals of coding to make CC productive, but training opportunities will become more scarce
+        \item They still need to know the fundamentals of coding to make CC productive, but training opportunities will become more scarce
         \item Otherwise, RAships that focus more on high level conceptual tasks will probably help make them better researchers. But IMO requires higher RA ability and trust
     \end{itemize}
 \end{itemize}
