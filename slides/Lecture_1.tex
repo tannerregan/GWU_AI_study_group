@@ -1,6 +1,10 @@
 \documentclass[aspectratio=169, 12pt]{beamer}
 \input{_preamble.tex}
 
+% ---------- URL shortcuts ----------
+\newcommand{\ghub}{https://tannerregan.github.io/GWU_AI_study_group/}
+% -----------------------------------
+
 \begin{document}
 \linespread{1.2}
 
@@ -994,6 +998,10 @@ Read more at \href{https://claesbackman.com/claude-code-guide.html\#:~:text=VERS
         \item Cowork comes with the desktop app
         \item It restricts which IP addresses the agent can reach (can adjust permissions)
         \item It's less risky, but less powerful than CC due to the restrictions
+    \end{itemize}
+    \item Permissions tips: 
+    \begin{itemize}
+        \item set \href{\ghub/.claude/settings.local.json}{/.claude/settings.local.json} so certain domains are always allowed in project
     \end{itemize}
 \end{itemize}
 \end{frame}
