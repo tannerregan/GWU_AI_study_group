@@ -283,7 +283,12 @@
     \item Very quickly - how to run stata from VS Code
     \begin{itemize}
         \item Use the \href{https://github.com/tmonk/stata-workbench}{Stata Workbench Extension} (setup guide at link)
-        \item Make sure the extension can `find' stata
+        \item Make sure the extension can `find' stata 
+        \begin{itemize}
+            \item \href{\ghLtwo/stata_vscode_demo/mcp_stata_fix.md}{Fix: mcp-stata ``Connection closed'' Error on Windows} 
+            \item Needs to connect to python to run `uv.exe'
+            \item Also had trouble reading from Box \href{\ghLtwo/stata_vscode_demo/}{fix}
+        \end{itemize}
         \item Work (mostly) as normal
         \begin{itemize}
             \item Some things different, e.g. 'browse' needs to be done point and click.
@@ -310,12 +315,13 @@
 Python for Economists: Common Tasks
 
 \begin{itemize}
-    \item Data analysis with \texttt{pandas}: merging, collapsing, reshaping --- analogous to Stata
-    \item Econometrics: \texttt{statsmodels}, \texttt{linearmodels} (panel data, IV)
+    \item Data cleaning with \texttt{pandas}: merging, collapsing, reshaping 
     \item Data collection: \texttt{requests}, \texttt{BeautifulSoup} for scraping (Session 3)
     \item Figures: \texttt{matplotlib}, \texttt{seaborn} --- publication-quality plots
+    \item Applied econometrics: \texttt{statsmodels}, \texttt{linearmodels} (panel data, IV)
+    \item Anything else you might want a computer to do!
     \vspace{.05in}
-    \item Claude Code can translate your Stata code to Python (or vice versa) --- useful for:
+    \item Claude Code can translate your Stata code to Python (or vice versa):
         \begin{itemize}
             \item[$\circ$] Running analyses you cannot do in Stata
             \item[$\circ$] Working with large datasets where Python is faster

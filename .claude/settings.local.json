@@ -6,7 +6,8 @@
       "WebFetch(domain:hpam7660.com)",
       "WebFetch(domain:marketplace.visualstudio.com)",
       "WebFetch(domain:docs.statamcp.com)",
-      "WebFetch(domain:www.stata.com)"
+      "WebFetch(domain:www.stata.com)",
+      "PowerShell(uvx --python 3.11 --from \"mcp-stata@latest\" python \"$env:TEMP\\\\stata_streaming_test.py\" 2>&1 | Where-Object { $_ -match \"^uvx|RC:|Stdout:|Error:|LOG:|Logs\" })"
     ]
   }
 }
