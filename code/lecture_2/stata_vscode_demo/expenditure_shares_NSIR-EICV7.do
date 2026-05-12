@@ -1,5 +1,6 @@
+di "hello from stata"
 use "C:\Users\tanner_regan\Box\data_main\kigali_rehousing\source\NSIR_microdata\NISR-EICV7\Cross_Section\CS_S8B_Food_Expenditure_Consumption.dta", clear
-
+count
 desc
 keep if province ==1
 tab s8bq0

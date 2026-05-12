@@ -285,13 +285,13 @@
         \item Use the \href{https://github.com/tmonk/stata-workbench}{Stata Workbench Extension} (setup guide at link)
         \item Make sure the extension can `find' stata 
         \begin{itemize}
-            \item \href{\ghLtwo/stata_vscode_demo/mcp_stata_fix.md}{Fix: mcp-stata ``Connection closed'' Error on Windows} 
             \item Needs to connect to python to run `uv.exe'
-            \item Also had trouble reading from Box \href{\ghLtwo/stata_vscode_demo/}{fix}
+            \item Also had trouble reading from outside of it's current working directory
+            \item Claude wrote up \href{\ghLtwo/stata_vscode_demo/mcp_stata_fix.md}{instructions}  to fix both
         \end{itemize}
         \item Work (mostly) as normal
         \begin{itemize}
-            \item Some things different, e.g. 'browse' needs to be done point and click.
+            \item Some things different, e.g. 'browse' (needs point and click), 'desc' and 'count' (sometimes don't run from script)
         \end{itemize}
     \item Otherwise, Claude Code can work with Stata similarly to previous example
     \end{itemize}
@@ -340,7 +340,7 @@ Python for Economists: Common Tasks
         \item Each project gets its own \textbf{environment}: a fixed set of packages and versions
             \begin{itemize}
                 \item[$\circ$] Prevents conflicts between projects
-                \item[$\circ$] Ensures others can reproduce your results exactly
+                \item[$\circ$] Ensures others can reproduce your results exactly (store in \texttt{.yml} file)
             \end{itemize}
         \item Ask Claude Code to create and activate an environment for you
     \end{itemize}
@@ -356,26 +356,6 @@ Python for Economists: Common Tasks
 
 
 
-
-%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Python Setup in VS Code}
-\begin{itemize}
-    \item Required extensions: Python, Jupyter
-    \item Managing environments:
-        \begin{itemize}
-            \item[$\circ$] Each project gets its own environment (set of packages + versions)
-            \item[$\circ$] Prevents conflicts between projects
-            \item[$\circ$] Ask Claude Code to create and activate an environment for you
-        \end{itemize}
-    \item Running code:
-        \begin{itemize}
-            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
-            \item[$\circ$] \textbf{Jupyter interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
-            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
-        \end{itemize}
-\end{itemize}
-\end{frame}
 
 
 \section{Data Analysis Demo with Python \vspace{0.3in}}
