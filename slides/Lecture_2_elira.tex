@@ -8,7 +8,7 @@
 \begin{document}
 \linespread{1.3}
 
-\title{Session 2: AI for Coding --- Practical Workflows and Demos}
+\title{Session 2: AI for Coding --- \\Practical Workflows and Demos}
 \author[AI for Economists]{Elira Kuka and Tanner Regan}
 \date[\today]{The George Washington University}
 \maketitle
@@ -42,6 +42,7 @@
 
 \end{frame}
 
+
 \section{\textcolor{violet}{Coding with Claude Code \vspace{0.3in}}}
 
 
@@ -67,6 +68,7 @@
 
 \end{frame}
 
+
 %%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Demo: Check RA work}
@@ -84,6 +86,7 @@
 \end{itemize}
 
 \end{frame}
+
 
 %%%%%%%%%%%%%%
 \begin{frame}
@@ -118,15 +121,10 @@
     \item Very quickly - how to run stata from VS Code
     \begin{itemize}
         \item Use the \href{https://github.com/tmonk/stata-workbench}{Stata Workbench Extension} (setup guide at link)
-        \item Make sure the extension can `find' stata 
-        \begin{itemize}
-            \item Needs to connect to python to run `uv.exe'
-            \item Also had trouble reading from outside of it's current working directory
-            \item Claude wrote up \href{\ghLtwo/stata_vscode_demo/mcp_stata_fix.md}{instructions}  to fix both
-        \end{itemize}
+        \item Make sure the extension can `find' stata
         \item Work (mostly) as normal
         \begin{itemize}
-            \item Some things different, e.g. 'browse' (needs point and click), 'desc' and 'count' (sometimes don't run from script)
+            \item Some things different, e.g. 'browse' needs to be done point and click.
         \end{itemize}
     \item Otherwise, Claude Code can work with Stata similarly to previous example
     \end{itemize}
@@ -150,13 +148,12 @@
 Python for Economists: Common Tasks
 
 \begin{itemize}
-    \item Data cleaning with \texttt{pandas}: merging, collapsing, reshaping 
+    \item Data analysis with \texttt{pandas}: merging, collapsing, reshaping --- analogous to Stata
+    \item Econometrics: \texttt{statsmodels}, \texttt{linearmodels} (panel data, IV)
     \item Data collection: \texttt{requests}, \texttt{BeautifulSoup} for scraping (Session 3)
     \item Figures: \texttt{matplotlib}, \texttt{seaborn} --- publication-quality plots
-    \item Applied econometrics: \texttt{statsmodels}, \texttt{linearmodels} (panel data, IV)
-    \item Anything else you might want a computer to do!
     \vspace{.05in}
-    \item Claude Code can translate your Stata code to Python (or vice versa):
+    \item Claude Code can translate your Stata code to Python (or vice versa) --- useful for:
         \begin{itemize}
             \item[$\circ$] Running analyses you cannot do in Stata
             \item[$\circ$] Working with large datasets where Python is faster
@@ -175,7 +172,7 @@ Python for Economists: Common Tasks
         \item Each project gets its own \textbf{environment}: a fixed set of packages and versions
             \begin{itemize}
                 \item[$\circ$] Prevents conflicts between projects
-                \item[$\circ$] Ensures others can reproduce your results exactly (store in \texttt{.yml} file)
+                \item[$\circ$] Ensures others can reproduce your results exactly
             \end{itemize}
         \item Ask Claude Code to create and activate an environment for you
     \end{itemize}
@@ -191,6 +188,26 @@ Python for Economists: Common Tasks
 
 
 
+
+%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Python Setup in VS Code}
+\begin{itemize}
+    \item Required extensions: Python, Jupyter
+    \item Managing environments:
+        \begin{itemize}
+            \item[$\circ$] Each project gets its own environment (set of packages + versions)
+            \item[$\circ$] Prevents conflicts between projects
+            \item[$\circ$] Ask Claude Code to create and activate an environment for you
+        \end{itemize}
+    \item Running code:
+        \begin{itemize}
+            \item[$\circ$] \textbf{Jupyter notebook} (\texttt{.ipynb}): interactive cells, inline output --- good for exploration
+            \item[$\circ$] \textbf{Jupyter interactive window}: run \texttt{.py} scripts cell-by-cell --- best of both worlds
+            \item[$\circ$] \textbf{Script} (\texttt{.py}): run the full pipeline --- best for production code
+        \end{itemize}
+\end{itemize}
+\end{frame}
 
 
 \section{Data Analysis Demo with Python \vspace{0.3in}}
