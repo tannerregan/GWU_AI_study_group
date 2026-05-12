@@ -22,7 +22,7 @@ A 6-session study group on practical AI tools for academic economists — from c
 | # | Topic | Status |
 |:-:|-------|:------:|
 | 1 | 💻 **AI for Coding** — Tools, Concepts, and Setup | ✅ Complete |
-| 2 | 💻 **AI for Coding** — Practical Workflows and Demos | 🔄 In development |
+| 2 | 💻 **AI for Coding** — Practical Workflows and Demos | ✅ Complete |
 | 3 | 🔍 **Finding and Collecting Data** | 🔄 In development |
 | 4 | 🎓 **Teaching** — Slides, Exams, and Student Feedback | 🔄 In development |
 | 5 | ⚡ **Productivity and Workflow Automation** | 🔄 In development |

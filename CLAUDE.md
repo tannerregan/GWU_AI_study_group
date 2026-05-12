@@ -63,13 +63,16 @@ Code examples are teaching materials — prioritize clarity and comments over co
 - Use `i.varname` for factor variables and fixed effects
 - Use `esttab` or `outreg2` for LaTeX table export
 - Comment every merge; print observation counts before and after each merge
-- Do-files go in `code/stata/`
+- Do-files go in `code/lecture_N/stata_*/`
 
 ### R
 - `tidyverse` style (`dplyr`, `tidyr`, `ggplot2`)
 - `fixest` for fixed effects and IV regressions
 - `modelsummary` for regression tables
-- Scripts go in `code/r/`
+- Scripts go in `code/lecture_N/r_*/`
+
+### Folder Convention
+Code is organized by lecture: `code/lecture_N/<language>_demo/`. Each subfolder contains scripts, versioned drafts (`_v0`, `_v1`), prompt logs (`.md`), and any output files.
 
 
 ---
@@ -82,10 +85,10 @@ GWU_AI_study_group/
 │   ├── _preamble.tex
 │   ├── Lecture_1.tex
 │   └── Lecture_2.tex
-├── code/            # Code examples (in development)
-│   ├── python/
-│   ├── stata/
-│   └── r/
+├── code/            # Code examples, organized by lecture
+│   ├── lecture_2/
+│   │   ├── python_demo/     # GIS download, satellite embeddings, event study
+│   │   └── stata_vscode_demo/  # Rwanda expenditure shares (NSIR-EICV7)
 ├── README.md
 └── CLAUDE.md
 ```
